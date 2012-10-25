@@ -1,0 +1,890 @@
+/*
+ * Font Configuration
+ */
+
+@import url(fonts/TeX-Gyre-Heros/TeX-Gyre-Heros.css);
+@import url(fonts/Merriweather/Merriweather.css);
+
+
+
+/* Ultimate Helvetica Stack
+ * via: https://gist.github.com/670835
+ */
+
+/* regular */
+.sans-regular  {
+    font-family: "HelveticaNeue", "Helvetica Neue", "HelveticaNeueRoman", "HelveticaNeue-Roman", "Helvetica Neue Roman", "TeXGyreHerosRegular", "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif;
+    font-weight: 400;
+    font-stretch: normal;
+	-webkit-font-stretch: normal;
+}
+/* regular bold */
+.sans-regular-bold {
+    font-family: "HelveticaNeueBold", "Helvetica Neue Bold", "HelveticaNeueRomanBold", "HelveticaNeue-Roman-Bold", "Helvetica Neue Roman Bold", "TeXGyreHerosBold", "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif;
+    font-weight: bold;
+    font-stretch: normal;
+	-webkit-font-stretch: normal;
+}
+/* condensed */
+.sans-condensed {
+    font-family: "HelveticaNeueCondensedBold", "HelveticaNeue-CondensedBold", "Helvetica Neue Condensed Bold",  "HelveticaNeueRomanCondensedBold", "HelveticaNeue-Roman-CondensedBold", "Helvetica Neue Roman Condensed Bold", "HelveticaNeue", "Helvetica Neue", "HelveticaNeueRoman", "HelveticaNeue-Roman", "Helvetica Neue Roman", "TeXGyreHerosCnRegular", "Helvetica", "Tahoma", "Geneva", "Arial Narrow", "Arial", sans-serif;
+    font-weight: 400;
+    font-stretch: condensed;
+}
+/* condensed bold */
+.sans-condensed-bold {
+    
+}
+
+
+* {
+	/* make sure firefox honors the proper box model */
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+
+
+/*
+ * Actual Page Structure
+ */
+
+html {
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    background-color: #42413C;
+    background-image: url(images/bg.gif);
+    background-repeat: repeat;
+    background-position: center center;
+
+    font-family: "Merriweather", "MerriweatherRegular", "Georgia", "Times", serif;
+    font-size: 12px;
+    line-height: 16px;
+    font-weight: normal;
+    text-align: left;
+    color: #666;
+
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 682px;
+    margin: 0 auto;
+    padding: 0;
+}
+
+
+/* Banners */
+
+.banner {
+/*     font-family: "Georgia", "Times", serif; */
+    width: 100%;
+    font-size: 14px;
+    line-height: 15px;
+    padding: 14px 0;;
+    -webkit-box-shadow: 0px 3px 5px 0px rgba(1, 1, 1, 0.2);
+    -moz-box-shadow: 0px 3px 5px 0px rgba(1, 1, 1, 0.2);
+    -o-box-shadow: 0px 3px 5px 0px rgba(1, 1, 1, 0.2);
+    box-shadow: 0px 3px 5px 0px rgba(1, 1, 1, 0.2);
+    text-align: center;
+	
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	
+	font-weight: lighter;
+}
+
+.banner.black {
+    background-color: #000;
+    color: #fff;
+}
+.banner.white {
+    background-color: #fff;
+    color: #666;
+    padding: 6px 0 3px 0;
+}
+
+
+
+/*
+ * General-purpose Layout Stuff
+ */
+
+/* use to space items evenly in a row of x width */
+table.width-divider {
+    width: 100%;
+}
+
+.hidden {
+    display: none;
+}
+
+.clear {
+    clear: both;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+
+/*
+ * Links
+ */
+
+a {
+    color: #000;
+    text-decoration: none;
+    /* unless you style your links to look extremely unique, it's best to provide underlines for quick visual identification */
+}
+
+a:visited {
+    color: #000;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #73c26d;
+    text-decoration: none;
+}
+
+a:active {
+    color: #72c26d;
+    text-decoration: none;
+}
+
+a.selected {
+    color: #72c26d;
+    text-decoration: none;
+}
+
+/* links in content text should be like this */
+p a {
+	color: #666;
+	text-decoration: underline;
+}
+p a:hover {
+	color: #000;
+	text-decoration: underline;
+}
+
+.black a {
+    color: #fff;
+}
+
+em {
+}
+
+.blurb em {
+    font-variant: normal;
+    text-transform: uppercase;
+    font-style: normal;
+}
+
+em a,
+.black em a {
+    color: #72c26d;
+    text-decoration: underline;
+    font-variant: small-caps;
+    font-style: normal;
+    text-transform: lowercase;
+}
+
+.black em a:hover {
+    color: #fff;
+    text-decoration: underline;
+}
+
+.job a {
+  color: #72c26d;
+}
+/*
+ * Voting
+ */
+
+a.vote.yes {
+    display: block;
+    background-image: url(images/issues/vote/yes.png);
+    height: 39px;
+    width: 37px;
+    float: left;
+    background-repeat: no-repeat;
+    background-position: 0px 0px;
+    margin-right: 4px;
+    margin-bottom: 5px;
+    margin-left: 4px;
+}
+a.vote.yes:hover {
+    background-position: 0px 2px;
+}
+
+a.vote.no {
+    display: block;
+    background-image: url(images/issues/vote/no.png);
+    height: 39px;
+    width: 37px;
+    float: left;
+    background-repeat: no-repeat;
+    background-position: 0px 0px;
+    margin-bottom: 4px;
+    margin-right: 5px;
+    margin-left: 4px;
+}
+a.vote.no:hover {
+    background-position: 0px 2px;
+}
+
+.vote.counter {
+    font-family: "Merriweather", "MerriweatherRegular", "Georgia", "Times", serif;
+    font-size: 18px;
+    line-height: 18px;
+    color: #fff;
+    background-color: #000;
+    padding: 6px 12px;
+    display: block;
+    float: left;
+    margin-bottom: 4px;
+    margin-right: 0px;
+    margin-left: 4px;
+}
+
+div.vote {
+    float: left;
+    margin-top: 16px;
+    margin-left: 6px;
+}
+
+
+
+/*
+ * Sharing
+ */
+
+a.fb {
+    display: block;
+    background-image: url(images/fb.jpg);
+    height: 21px;
+    width: 21px;
+    float: left;
+    background-repeat: no-repeat;
+    background-position: 0px 0px;
+    margin-bottom: 5px;
+}
+a.tw {
+    display: block;
+    background-image: url(images/tw.jpg);
+    height: 21px;
+    width: 21px;
+    float: left;
+    background-repeat: no-repeat;
+    background-position: 0px 0px;
+    margin-bottom: 5px;
+}
+
+a.twitter,
+a.rss,
+a.donate,
+a.redditors {
+    background-repeat: no-repeat;
+    display: inline-block;
+    height: 25px;
+    padding-top: 5px;
+    font-size: 12px;
+}
+a.twitter,
+a.rss {
+    padding-left: 33px;
+}
+a.donate,
+a.redditors {
+    padding-left: 43px;
+}
+
+a.twitter {
+    background-image: url(images/twitter.png);
+    color: #40c8ed;    
+}
+
+a.rss {
+    background-image: url(images/rss.png);
+    color: #f78b16;    
+}
+
+a.donate {
+    background-image: url(images/donate.png);
+    color: #72c26d;
+}
+
+.white a.redditors {
+    background-image: url(images/redditors.png);
+    color: #666;
+}
+.black a.redditors {
+    background-image: url(images/redditors-white.png);
+    color: #fff;
+}
+
+
+/*
+ * Footer
+ */
+
+.footer {
+    
+}
+
+#footer-terms-copy {
+    text-align: center;
+    font-family: "Arial", sans-serif;
+    font-size: 11px;
+}
+#footer-terms-copy span {
+    margin: 0 1em;
+}
+
+
+/*
+ * Headers
+ */
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "HelveticaNeueCondensedBold", "HelveticaNeue-CondensedBold", "Helvetica Neue Condensed Bold",  "HelveticaNeueRomanCondensedBold", "HelveticaNeue-Roman-CondensedBold", "Helvetica Neue Roman Condensed Bold", "HelveticaNeue", "Helvetica Neue", "HelveticaNeueRoman", "HelveticaNeue-Roman", "Helvetica Neue Roman", "TeXGyreHerosCnRegular", "Helvetica", "Tahoma", "Geneva", "Arial Narrow", "Arial", sans-serif;
+    font-weight: 400;
+    font-stretch: condensed;
+	text-transform: uppercase;
+}
+
+
+
+/* Fancy Header Thing */
+#spark-logo {
+    width: 100%;
+    height: 180px;
+}
+#logo-bitmap {
+    width: 100%;
+    height: 158px;
+    margin-top: 30px;
+    background-image: url('images/Logo%20Main.png');
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+#logo-vector {
+    display: none;
+}
+
+
+/* Vector versions for browsers guaranteed to support it, including iOS Safari */
+@media (-webkit-min-device-pixel-ratio:0) {
+/* this selects only webkit browsers, inclding Mobile Safari on iOS */
+
+/*
+#logo-bitmap { display: none; }
+#logo-vector { display: block; }
+
+h1#thespark {
+    font-family: "Merriweather", "MerriweatherRegular", "Georgia", "Times", serif;
+    font-weight: normal;
+    font-size: 141px;
+    width: 100%;
+    text-align: center;
+    line-height: 1.15em;
+	text-transform: none;
+	
+	overflow: visible;
+	white-space: nowrap;
+	margin-top: 30px;
+	
+    color: #000;
+}
+
+#tagline {
+    font-family: "Merriweather", "MerriweatherRegular", "Georgia", "Times", serif;
+    font-size: 21px;
+    font-weight: normal;
+    margin-top: -16px;
+    margin-left: 26px;
+    
+    color: #000;
+}
+*/
+
+}
+
+#spark-logo a.back {
+    text-align: right;
+    font-family: "HelveticaNeueCondensedBold", "HelveticaNeue-CondensedBold", "Helvetica Neue Condensed Bold",  "HelveticaNeueRomanCondensedBold", "HelveticaNeue-Roman-CondensedBold", "Helvetica Neue Roman Condensed Bold", "HelveticaNeue", "Helvetica Neue", "HelveticaNeueRoman", "HelveticaNeue-Roman", "Helvetica Neue Roman", "TeXGyreHerosCnRegular", "Helvetica", "Tahoma", "Geneva", "Arial Narrow", "Arial", sans-serif;
+    font-weight: 400;
+    font-stretch: condensed;
+	text-transform: uppercase;
+	color: #666;
+
+	font-size: 12px;
+	line-height: 18px;
+	margin-top: -18px;
+	float: right;
+	
+	cursor: pointer;
+}
+
+
+
+h1 {
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 32px;
+    line-height: 62px;
+    margin: 0;
+}
+
+h2 {
+	font-size: 21px;
+}
+
+
+
+/*
+ * Page-specific layout
+ */
+
+hr.section {
+    width: 100%;
+    height: 4px;
+    margin: 20px 0;
+    border: none;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+}
+
+p.blurb {
+    font-family: "Merriweather", "MerriweatherRegular", "Georgia", "Times", serif;
+    font-size: 20px;
+    line-height: 28px;
+    font-weight: normal;
+    color: #666;
+    
+    margin: 0 20px;
+}
+
+#content-home,
+#content-jobs {
+    margin-bottom: 140px;
+}
+
+
+/*
+ * Jobs
+ */
+ 
+.get-involved {
+	padding-left: 20px;
+	width: 100%;
+	margin-bottom: 20px;
+}
+
+.get-involved h2 {
+    font-family: "Merriweather", "MerriweatherRegular", "Georgia", "Times", serif;
+    text-transform: none;
+}
+
+.get-involved ul {
+	display: block;
+	margin: 0;
+	padding: 0;
+}
+.get-involved ul li {
+	display: block;
+	float: left;
+	width: 300px;
+	font-size: 16px;
+	margin-top: 10px;
+	margin-bottom: 6px;
+}
+.get-involved ul li a {
+	text-decoration: underline;
+	color: #72c26d;
+}
+.get-involved ul li a:hover {
+    color: #000;
+}
+
+
+.job {
+    margin-bottom: 40px;
+}
+
+.job p {
+    font-size: 12px;
+    line-height: 18px;
+}
+
+.job h3 {
+    font-size: 16px;
+    line-height: 28px;
+}
+
+
+/*
+ * Issues
+ */
+
+
+.issue {
+	font-size: 14px;
+	line-height: 20px;
+}
+
+.issue-solution ul a { text-decoration: underline; }
+
+.issue.example p a:hover {
+    cursor: default;
+    color: #666;
+    
+}
+
+.issue.example:before {
+	content: "* Example post";
+    font-family: "Arial", sans-serif;
+	text-transform: uppercase;
+	font-size: 10px;
+	display: block;
+	padding-left: 14px;
+	margin: 0;
+	margin-bottom: -20px;
+}
+
+.issue.shadow {
+    background: url(images/issue-shadow.png) center top;
+    width: 100%;
+    height: 30px;
+}
+
+.prompt {
+    padding: 0 21px;
+}
+
+.prompt .question {
+	float: left;
+	font-size: 20px;
+}
+
+.issue-container {
+	clear: both;
+}
+
+.issue-issue {
+    width: 100%;
+    background-color: #FFF;
+    border: 1px solid #dadada;
+    padding: 20px;
+}
+
+.issue-a-title {
+    font-size: 24px;
+    line-height: 30px;
+    margin-bottom: 10px;
+    color: #000;
+    font-weight: bold;
+}
+
+.issue-details {
+    font-family: "nimbus-sans", Helvetica, sans-serif;
+    font-size: 10px;
+    margin-top: 10px;
+    color: #999;
+}
+
+.issue-solution-details {
+    font-family: "nimbus-sans", Helvetica, sans-serif;
+    font-size: 11px;
+}
+
+.issue-c-body {
+    margin-top: 12px;
+}
+
+.issue-solution-body {
+    margin-bottom: 10px;
+    margin-top: 12px;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.issue-image {
+    width: 170px;
+    height: 170px;
+    float: right;
+    border: 5px solid #dadada;
+    margin-left: 40px;
+    margin-bottom: 40px;
+
+    background-image: url(images/issues/video/factory-thumb.png);
+    background-position: top left;
+    background-repeat: no-repeat;
+}
+
+a.issue-video-button {
+    display: block;
+    width: 160px;
+    height: 160px;
+    background-image: url(images/issues/video/video-button.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+
+
+.issue-solution {
+    background-color: #f3f3f3;
+    border: 1px solid #dadada;
+    padding: 22px;
+    font-size: 12px;
+    line-height: 16px;
+    margin-top: 12px;
+	clear: both;
+}
+.issue-solution h3 {
+    color: #666;
+    font-size: 20px;
+}
+.issue-solution ul {
+    margin: 0;
+    padding: 0;
+    padding-left: 16px;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.issue-solution ul li {
+    margin-bottom: 6px;
+}
+
+
+.issue-solution-title {
+    text-transform: uppercase;
+    font-size: 18px;
+	color: #000;
+	margin: 0;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+img {
+    border: 0;
+}
+
+.issue-solutions-top,
+.issue-comments-top {
+    width: 13px;
+    background-image: url(images/issues/caret.png);
+    background-repeat: no-repeat;
+    position: relative;
+    margin-bottom: -1px; /* achieves the effect that the caret is part of the outline */
+    clear: both;
+    height: 14px;
+}
+
+.issue-solutions-top {
+    margin-left: 24px;
+}
+
+.issue-comments-top {
+    margin-left: 91px;
+}
+
+.issue-solutions,
+.issue-comments {
+    width: 100%;
+    border: 1px solid #72c26d;
+    margin-top: -1px;
+    padding: 15px;
+    margin: 0px;
+}
+
+.issue-comment {
+    float: left;
+}
+
+.issue-comment-morelink {
+    font-size: 12px;
+    margin: 0;
+    line-height: 10px;
+    text-align: right;
+    clear: both;
+    width: 100%;
+}
+
+.user-pic {
+    width: 50px;
+    height: 50px;
+    background-color: #666;
+    float: left;
+}
+
+.issue-user-comment {
+    float: left;
+    width: 544px;
+    margin-left: 14px;
+}
+
+.issue-solutions p,
+.issue-comments p {
+    font-size: 11px;
+    line-height: 15px;
+    margin: 0px;
+    padding: 0px;
+}
+
+.user-name {
+    color: #000;
+    font-weight: bold;
+}
+
+.issue-user-comment-reply {
+    float: left;
+    margin-right: 10px;
+}
+
+.issue-user-comment-like {
+    float: left;
+    margin-right: 2px;
+}
+
+.issue-user-comment-posted {
+    font-family: "nimbus-sans", Helvetica, sans-serif;
+    font-size: 11px;
+    margin-bottom: 0px;
+}
+
+.issue-comment-divider {
+    background-color: #CCC;
+    float: left;
+    height: 1px;
+    width: 608px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.comments-count {
+    font-family: "Merriweather", "MerriweatherRegular", Georgia, "Times New Roman", Times, serif;
+    font-size: 14px;
+}
+
+
+.participate {
+	width: 100%;
+	margin-bottom: 0;
+	text-transform: uppercase;
+}
+
+.participate .counter {
+	color: #000;
+}
+
+
+/*
+ * Signup/Login Overlay
+ */
+
+.overlay .signup {
+    margin: 290px auto;
+    width: 490px;
+    padding: 40px 50px 20px  50px;
+    background-color: #666;
+    color: #fff;
+    text-align: center;
+    -webkit-box-shadow: 0px 0px 10px 0px rgba(1, 1, 1, 0.8);
+    -moz-box-shadow: 0px 0px 10px 0px rgba(1, 1, 1, 0.8);
+    -o-box-shadow: 0px 0px 10px 0px rgba(1, 1, 1, 0.8);
+    box-shadow: 0px 0px 10px 0px rgba(1, 1, 1, 0.8);
+}
+
+.overlay .signup .closebox {
+    display: block;
+    float: right;
+    clear: both;
+    width: 36px;
+    height: 36px;
+    margin-top: -40px;
+    margin-right: -50px;
+    background-image: url(images/closebox-large.png);
+    background-repeat: no-repeat;
+}
+
+.overlay .signup h2,
+.overlay .signup .info {
+    font-family: "Merriweather", "MerriweatherRegular", "Georgia", "Times", serif;
+}
+
+.overlay .signup h2 {
+    font-size: 26px;
+    line-height: 36px;
+    text-transform: none;
+    margin-top: 0;
+    font-weight: lighter;
+}
+
+.overlay .signup .info {
+    font-size: 16px;
+    line-height: 22px;
+    font-weight: lighter;
+}
+
+.overlay .signup hr {
+    border: none;
+    border-top: 1px solid #949494;
+}
+
+.overlay form input {
+}
+
+.overlay form input[type=email],
+.overlay form input[type=password] {
+    border: none;
+    box-shadow: inset 0px 2px 2px 0px rgba(0, 0, 0, 0.5);
+    height: 38px;
+    width: 300px;
+    border-radius: 20px;
+    padding: 0 20px;
+    color: #666;
+    margin-top: 16px;
+}
+
+.overlay form input[type=submit] {
+	display: block;
+	margin: 0 auto;
+	margin-top: 16px;
+	padding: 0;
+	color: transparent;
+	font-size: 14px;
+    font-family: "Merriweather", "MerriweatherRegular", "Georgia", "Times", serif;
+	width: 186px;
+	height: 43px;
+	border: none;
+	background-color: transparent;
+	background-image: url(images/signup.png);
+	background-position: -2px -42px;
+	background-repeat: no-repeat;
+}
+.overlay form input[type=submit]:hover {
+	background-position: -2px 1px;
+}
+
+.overlay .signup .switch,
+.overlay .register .switch {
+    font-family: "Helvetica", "Arial", sans-serif;
+    font-size: 12px;
+    font-weight: lighter;
+}
