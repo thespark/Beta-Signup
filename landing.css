@@ -119,7 +119,9 @@ body {
 
 /* use to space items evenly in a row of x width */
 table.width-divider {
-    width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+	width: 450px;
 }
 
 .hidden {
