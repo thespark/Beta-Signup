@@ -105,12 +105,20 @@ $(document).ready(function() {
     
     // Deal with direct link clicks
     $('a.back').click(function() {
+		if ($('#content-home').is(":visible")) {
         location.hash = '';
         toggle_jobs_display();        
+        return false; }
         
-        return false;
     });
     
+    $('#spark-logo a').click(function() {
+		if ($('#content-jobs').is(":visible")) {
+        location.hash = '';
+        toggle_jobs_display();        
+        return false; }
+    });
+	
     // Handle for URLs
     if (location.hash.length > 0) {
         hash = location.hash;
