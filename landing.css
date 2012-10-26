@@ -293,7 +293,6 @@ a.tw {
 }
 
 a.twitter,
-a.rss,
 a.donate,
 a.redditors {
     background-repeat: no-repeat;
@@ -302,28 +301,24 @@ a.redditors {
     padding-top: 5px;
     font-size: 12px;
 }
-a.twitter,
-a.rss {
-    padding-left: 33px;
-}
+a.twitter, 
 a.donate,
 a.redditors {
-    padding-left: 43px;
+    padding-left: 33px;
+	width: 150px;
 }
 
 a.twitter {
     background-image: url(images/twitter.png);
     color: #40c8ed;    
+    background-position: 30px 0px;
 }
 
-a.rss {
-    background-image: url(images/rss.png);
-    color: #f78b16;    
-}
 
 a.donate {
     background-image: url(images/donate.png);
     color: #72c26d;
+    background-position: 30px 0px;
 }
 
 .white a.redditors {
@@ -333,6 +328,7 @@ a.donate {
 .black a.redditors {
     background-image: url(images/redditors-white.png);
     color: #fff;
+
 }
 
 
