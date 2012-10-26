@@ -309,7 +309,7 @@ a.redditors {
     padding-left: 33px;
 }
 
-a.redditors { width: 140px; }
+a.redditors { width: 146px; }
 a.twitter { width: 100px; }
 a.donate { width: 90px; }
 
@@ -318,14 +318,14 @@ a.donate { width: 90px; }
 a.twitter {
     background-image: url(images/twitter.png);
     color: #40c8ed;    
-    background-position: 12px 0px;
+    background-position: 8px 0px;
 }
 
 
 a.donate {
     background-image: url(images/donate.png);
     color: #72c26d;
-    background-position: 8px 0px;
+    background-position: 3px 0px;
 }
 
 .white a.redditors {
