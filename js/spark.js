@@ -1,5 +1,6 @@
 $(document).ready(function() {
-    
+	// get our path
+    var path = window.location.pathname;
     function toggle_jobs_display(callback) {
         var def1 = $('#content-jobs').fadeToggle('hidden');            
         var def2 = $('#content-home').fadeToggle('hidden');
@@ -56,8 +57,12 @@ $(document).ready(function() {
             $('#signup').addClass('hidden');
         }
     });
-
-
+	// hides overlay on submit
+	
+	$('#mc-embedded-subscribe-form').submit(function(){
+		$(this).closest('.overlay').addClass('hidden');
+	});
+	
     /* Issue comments and solutions handler */
 /*
     $('.issue .view.solutions').click(function() {
@@ -142,5 +147,14 @@ $(document).ready(function() {
                 break;
         }
     }
+
+	// Privacy  and terms transitions
+   
+	   if (path.match(/(.*privacy\.html|.*terms\.html)/)) {
+		   
+		   $("body").css("display", "none");
+		   $("body").fadeIn(800);
+		
+	   }
 
 });
