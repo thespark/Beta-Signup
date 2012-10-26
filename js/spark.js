@@ -17,7 +17,7 @@ $(document).ready(function() {
         
         $('body').animate(
             {scrollTop: scrollTo.offset().top},
-            2000,
+            500,
             'swing',
             function() {
                 location.hash = hash;
