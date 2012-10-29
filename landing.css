@@ -352,7 +352,7 @@ a.donate {
     font-family: "Arial", sans-serif;
     font-size: 11px;
 }
-#footer-terms-copy span, #footer-terms-copy a {
+#footer-terms-copy span {
     margin: 0 1em;
 }
 
@@ -438,9 +438,7 @@ h1#thespark {
 	line-height: 18px;
 	margin-top: 18px;
 	float: right;
-}
-
-#spark-logo a { 	
+	
 	cursor: pointer;
 }
 
