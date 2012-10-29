@@ -81,7 +81,7 @@ function scroll_to(position) {
 		event.preventDefault();
 		content.hide();
 		jobs.fadeIn(500);
-		scroll_to($(this.hash).offset().top);
+		scroll_to($(this.hash).offset().top - 100);
 		back.fadeIn(500); 
 	});
 /****************************************************************************/
