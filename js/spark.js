@@ -1,4 +1,13 @@
 $(document).ready(function() {
+<<<<<<< HEAD
+=======
+	// get our path
+    var path = window.location.pathname;
+    function toggle_jobs_display(callback) {
+        var def1 = $('#content-jobs').fadeToggle('hidden');            
+        var def2 = $('#content-home').fadeToggle('hidden');
+        var def3 = $('#header a.back').toggleClass('hidden');
+>>>>>>> 5542813d01a113eccd04e32435520c2496877dd6
 
 /* Selector caching ************************************************************/
 var content = $('#content');
@@ -34,6 +43,7 @@ function scroll_to(position) {
         if (e.keyCode == 27 && $('#signup:visible')) {
             signup.hide();
         }
+<<<<<<< HEAD
 	});
 		
 /******************************************************************************/		
@@ -84,8 +94,105 @@ function scroll_to(position) {
 		back.fadeIn(500); 
 	});
 /****************************************************************************/
+=======
+    });
+	// hides overlay on submit
+	
+	$('#mc-embedded-subscribe-form').submit(function(){
+		$(this).closest('.overlay').addClass('hidden');
+	});
+	
+    /* Issue comments and solutions handler */
+/*
+    $('.issue .view.solutions').click(function() {
+        $(this).closest('.issue-issue').children('.issue-comments, .issue-comments-top').addClass('hidden');
+        $(this).closest('.issue-issue').children('.issue-solutions, .issue-solutions-top').toggleClass('hidden');
+        $(this).closest('.issue-details').children('.view.comments').removeClass('selected');
+        $(this).toggleClass('selected');
+    });
+    $('.issue .view.comments').click(function() {
+        $(this).closest('.issue-issue').children('.issue-solutions, .issue-solutions-top').addClass('hidden');
+        $(this).closest('.issue-issue').children('.issue-comments, .issue-comments-top').toggleClass('hidden');
+        $(this).closest('.issue-details').children('.view.solutions').removeClass('selected');
+        $(this).toggleClass('selected');
+    });
+*/
+    
+    /* Tooltip closebutton */
+/*
+    $('.vote-tooltip-close').click(function () {
+        $(this).closest('.vote-tooltip-container').addClass('hidden');
+    });
+*/
+>>>>>>> 5542813d01a113eccd04e32435520c2496877dd6
 
 
 });    
 
+<<<<<<< HEAD
 
+=======
+        if ($('#content-jobs').text().length > 0) {
+            // jobs content loaded
+            toggle_jobs_display(function() {
+                // location.hash = hash;
+                scrollto_job(hash);
+                console.log('a.job .click if loaded ' + hash);
+            });            
+        } else {
+            // have to load jobs
+            load_and_scrollto_job(hash);          
+        }
+    });
+    
+    // Deal with direct link clicks
+    $('a.back').click(function() {
+		if ($('#content-home').is(":visible")) {
+        location.hash = '';
+        toggle_jobs_display();        
+        return false; }
+        
+    });
+    
+    $('#spark-logo a').click(function() {
+		if ($('#content-jobs').is(":visible")) {
+        location.hash = '';
+        toggle_jobs_display();        
+        return false; }
+    });
+	
+    // Handle for URLs
+    if (location.hash.length > 0) {
+        hash = location.hash;
+        location.hash = '';
+        
+        switch(hash) {
+            case '#Partnerships-and-Fundraising-Lead':
+                load_and_scrollto_job(hash);
+                break;
+            case '#Offline-Communications-Lead':
+                load_and_scrollto_job(hash);
+                break;
+            case '#Crowd-sourcing-Expert':
+                load_and_scrollto_job(hash);
+                break;
+            case '#Front-end-Developer':
+                load_and_scrollto_job(hash);
+                break;
+            case '#Application-Developer':
+                load_and_scrollto_job(hash);
+                break;
+        }
+    }
+
+	// Privacy  and terms transitions
+   
+	   if (path.match(/(.*privacy\.html|.*terms\.html)/)) {
+		   
+		   $("body").css("display", "none");
+		   $("body").fadeIn(800);
+		
+	   }
+
+});
+>>>>>>> 5542813d01a113eccd04e32435520c2496877dd6
