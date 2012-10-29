@@ -28,8 +28,8 @@ $(document).ready(function() {
 	// Intercept privacy and terms links
 	$('a.privacy, a.terms').click(function(event) {
 		event.preventDefault();
-		$('#content-home').hide();
-		$('#content').show();
+		// Prevents flicker on slower machines
+		$('#content').hide();
 		if($('#content-jobs').is(':visible')) {
 			$('#content-jobs').hide();
 		}
@@ -37,7 +37,9 @@ $(document).ready(function() {
 		$.get(link, function(data) {
 			$('#content').empty();
 			$('#content').html($(data).filter('#content').html());
-			$('.back').show(); 
+			$('#content-home').fadeOut(200);
+			$('.back').fadeIn(500);
+			$('#content').fadeIn(500); 
 			scroll_to(0);
 		});
 
@@ -49,12 +51,12 @@ $(document).ready(function() {
 		// Workaround for code execution prevention in loaded pages
 		if($('#content-jobs').is(':visible')) {
 			$('#content-jobs').hide();
-			$('#content-home').show();
+			$('#content-home').fadeIn(500);
 			$('.back').hide();
 		} else {
 			$('#content').hide();
 			$('.back').hide(); 
-			$('#content-home').show();
+			$('#content-home').fadeIn(500);
 			scroll_to(0)
 		}
 	});
@@ -63,9 +65,9 @@ $(document).ready(function() {
 		$('#content-home').hide();
 		event.preventDefault();
 		$('#content').hide();
-		$('#content-jobs').show();
+		$('#content-jobs').fadeIn(500);
 		scroll_to($(this.hash).offset().top)
-		$('.back').show(); 
+		$('.back').fadeIn(500); 
 	});
 /****************************************************************************/
 
