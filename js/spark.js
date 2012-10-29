@@ -1,11 +1,12 @@
+
 $(document).ready(function() {
 
 /* Selector caching ************************************************************/
-var content = $('#content');
-var home = $('#content-home');
-var jobs = $('#content-jobs');
-var signup = $('#signup');
-var back = $('.back');
+var content = $('#content')
+ , home = $('#content-home')
+ , jobs = $('#content-jobs')
+ , signup = $('#signup')
+ , back = $('.back');
 /*******************************************************************************/
 
 /* Scroll to position ******************************************************/
@@ -31,7 +32,7 @@ function scroll_to(position) {
 	// hides overlay on esc
     $(document).keyup(function(e) {
         // user hits esc when the dialog is open
-        if (e.keyCode == 27 && $('#signup:visible')) {
+        if (e.keyCode === 27 && $('#signup:visible')) {
             signup.hide();
         }
 	});
@@ -47,7 +48,7 @@ function scroll_to(position) {
 		if(jobs.is(':visible')) {
 			jobs.hide();
 		}
-		link = this.href.match(/\/(\w*\.html)/)[1];
+		var link = this.href.match(/\/(\w*\.html)/)[1];
 		$.get(link, function(data) {
 			content.empty();
 			content.html($(data).filter('#content').html());
@@ -71,7 +72,7 @@ function scroll_to(position) {
 			content.hide();
 			back.hide(); 
 			home.fadeIn(500);
-			scroll_to(0)
+			scroll_to(0);
 		}
 	});
 	// Intercept jobs links
@@ -80,12 +81,11 @@ function scroll_to(position) {
 		event.preventDefault();
 		content.hide();
 		jobs.fadeIn(500);
-		scroll_to($(this.hash).offset().top)
+		scroll_to($(this.hash).offset().top);
 		back.fadeIn(500); 
 	});
 /****************************************************************************/
 
 
 });    
-
 
