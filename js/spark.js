@@ -60,7 +60,7 @@ function scroll_to(position) {
 	});
 	
 	// Intercept back to home link
-	$('a.back').click(function(event) {
+	$('a.back, a.logo').click(function(event) {
 		event.preventDefault();
 		// Workaround for code execution prevention in loaded pages
 		if(jobs.is(':visible')) {
