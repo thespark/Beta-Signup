@@ -1,9 +1,10 @@
 /*
  * Font Configuration
  */
-
-@import url(fonts/TeX-Gyre-Heros/TeX-Gyre-Heros.css);
+@import url(http://fonts.googleapis.com/css?family=Merriweather);
+/*@import url(fonts/TeX-Gyre-Heros/TeX-Gyre-Heros.css);
 @import url(fonts/Merriweather/Merriweather.css);
+ */
 
 
 
@@ -35,6 +36,12 @@
 .sans-condensed-bold {
     
 }
+
+h2 {
+	margin-bottom:15px;
+	padding:0px;
+	font-size: 20px;
+	}
 
 
 * {
@@ -198,18 +205,22 @@ em {
 }
 
 .blurb em {
-    font-variant: normal;
-    text-transform: uppercase;
     font-style: normal;
+	}
+	
+.body-sign-up {
+	text-transform: uppercase;
+	font-size:15px;
 }
 
 em a,
 .black em a {
     color: #72c26d;
     text-decoration: underline;
-    font-variant: small-caps;
     font-style: normal;
-    text-transform: lowercase;
+    text-transform: uppercase;
+	font-size:11px;
+	
 }
 
 .black em a:hover {
@@ -382,7 +393,7 @@ h1, h2, h3, h4, h5, h6 {
 /* Fancy Header Thing */
 #spark-logo {
     width: 100%;
-    height: 180px;
+    height: 194px;
 	margin-top: 120px;
 }
 #logo-bitmap {
@@ -443,13 +454,12 @@ h1#thespark {
     font-stretch: condensed;
 	text-transform: uppercase;
 	color: #666;
-
 	font-size: 12px;
 	line-height: 18px;
 	margin-top: 18px;
-	float: right;
-	
+	float:right;
 	cursor: pointer;
+	clear:left;
 }
 
 #spark-logo {
@@ -466,9 +476,7 @@ h1 {
     margin: 0;
 }
 
-h2 {
-	font-size: 21px;
-}
+
 
 
 
@@ -479,7 +487,7 @@ h2 {
 hr.section {
     width: 100%;
     height: 4px;
-    margin: 20px 0;
+    margin: 10px 0;
     border: none;
     border-top: 1px solid #ccc;
     border-bottom: 1px solid #ccc;
@@ -492,7 +500,7 @@ p.blurb {
     font-weight: normal;
     color: #666;
     
-    margin: 0 20px;
+    margin: 20px;
 }
 
 #content-home,
@@ -508,6 +516,7 @@ p.blurb {
 .get-involved {
 	padding-left: 20px;
 	width: 100%;
+	margin-top:25px;
 	margin-bottom: 20px;
 }
 
@@ -525,9 +534,11 @@ p.blurb {
 	display: block;
 	float: left;
 	width: 300px;
-	font-size: 16px;
+	font-size: 14px;
 	margin-top: 10px;
 	margin-bottom: 6px;
+	margin-right:20px;
+	text-transform:uppercase;	
 }
 .get-involved ul li a {
 	text-decoration: underline;
@@ -561,6 +572,11 @@ p.blurb {
 .issue {
 	font-size: 14px;
 	line-height: 20px;
+	margin-top:40px;
+}
+.shadow{
+	
+	margin-top:0px;
 }
 
 .issue-solution ul a { text-decoration: underline; }
@@ -582,7 +598,7 @@ p.blurb {
 	margin-bottom: -20px;
 }
 
-.issue.shadow {
+.shadow {
     background: url(images/issue-shadow.png) center top;
     width: 100%;
     height: 30px;
@@ -606,6 +622,7 @@ p.blurb {
     background-color: #FFF;
     border: 1px solid #dadada;
     padding: 20px;
+	
 }
 
 .issue-a-title {
