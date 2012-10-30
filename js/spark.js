@@ -11,7 +11,7 @@ var content = $('#content')
 
 /* Scroll to position ******************************************************/
 function scroll_to(position) {
-	$('body').animate({scrollTop: position}, 500);
+	$('body,html').animate({scrollTop: position}, 500);
 }
 /****************************************************************************/
  
