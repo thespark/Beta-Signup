@@ -1,10 +1,8 @@
 /*
  * Font Configuration
  */
+
 @import url(http://fonts.googleapis.com/css?family=Merriweather);
-/*@import url(fonts/TeX-Gyre-Heros/TeX-Gyre-Heros.css);
-@import url(fonts/Merriweather/Merriweather.css);
- */
 
 
 
@@ -14,7 +12,7 @@
 
 /* regular */
 .sans-regular  {
-    font-family: "HelveticaNeue", "Helvetica Neue", "HelveticaNeueRoman", "HelveticaNeue-Roman", "Helvetica Neue Roman", "TeXGyreHerosRegular", "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif;
+    font-family: "HelveticaNeue", "Helvetica Neue", "HelveticaNeueRoman", "HelveticaNeue-Roman", "Helvetica Neue Roman", "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif;
     font-weight: 400;
     font-stretch: normal;
 	-webkit-font-stretch: normal;
