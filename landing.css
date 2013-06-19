@@ -211,3 +211,4 @@ img { border: 0; }
 .banner ul a { vertical-align: bottom; font-size: 12px; text-align: left; color: #999; text-decoration: none; }
 .banner ul a:hover { color:#000;}
 .banner li { display: inline-block; margin-right: 30px; }
+.banner li.last { display: inline-block; margin-right: 0px; }
