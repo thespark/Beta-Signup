@@ -83,7 +83,7 @@ div.vote { float: left; margin-top: 16px; margin-left: 6px; }
 
 h1, h2, h3, h4, h5, h6 { font-family: "HelveticaNeueCondensedBold", "HelveticaNeue-CondensedBold", "Helvetica Neue Condensed Bold", "HelveticaNeueRomanCondensedBold", "HelveticaNeue-Roman-CondensedBold", "Helvetica Neue Roman Condensed Bold", "HelveticaNeue", "Helvetica Neue", "HelveticaNeueRoman", "HelveticaNeue-Roman", "Helvetica Neue Roman", "TeXGyreHerosCnRegular", "Helvetica", "Tahoma", "Geneva", "Arial Narrow", "Arial", sans-serif; font-weight: 400; font-stretch: condensed; text-transform: uppercase; }
 /* Fancy Header Thing */
-#spark-logo { width: 100%; height: 194px; margin-top: 120px; }
+#spark-logo { width: 100%; height: 194px; margin-top: 130px; }
 #logo-bitmap { width: 100%; height: 158px; margin-top: 30px; background-image: url('images/logo.svg'); background-position: center center; background-repeat: no-repeat; }
 #logo-vector { display: none; }
 
