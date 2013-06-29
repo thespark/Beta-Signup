@@ -214,8 +214,18 @@ img { border: 0; }
 .overlay form input[type=submit]:hover { background-position: -2px 1px; }
 .overlay .signup .switch, .overlay .register .switch { font-family: "Helvetica", "Arial", sans-serif; font-size: 12px; font-weight: lighter; }
 .banner ul { padding: 0px; margin: auto; text-align: center; }
-.banner ul img { vertical-align: middle; height: 20px; display: inline-block; margin: 0 4px 0 0; }
-.banner ul a { vertical-align: bottom; font-size: 12px; text-align: left; color: #999; text-decoration: none; }
-.banner ul a:hover { color:#000;}
+.banner ul img { vertical-align: middle; height: 20px; display: inline-block; margin: 0 4px 5px 0; }
+.banner ul a.top { font-size: 12px; text-align: left; color: #999; text-decoration: none; }
+.banner ul a.top:hover { color:#000;}
 .banner li { display: inline-block; margin-right: 30px; }
 .banner li.last { display: inline-block; margin-right: 0px; }
+
+
+
+
+
+a.button { display: inline-block; padding: 5px 30px 5px 30px; font: bold 16px/30px $helv; text-transform: capitalize; text-align: center; color: #fff; border-radius: 15px; -moz-border-radius: 15px; width: 110px; font: bold 14px helvetica, "helvetica neue", arial; text-decoration:none; text-align: center; color: #fff; }
+a.button:hover { color: #fff; }
+a.button.green { background-image: -webkit-gradient(linear, 50.00% 0.00%, 50.00% 100.00%, color-stop( 0%, rgba(150,207,147,1.00)), color-stop( 100%, rgba(88,179,82,1.00))); background-image: -webkit-linear-gradient(270deg, rgba(150,207,147,1.00) 0%, rgba(88,179,82,1.00) 100%); background-image: linear-gradient(180deg, rgba(150,207,147,1.00) 0%, rgba(88,179,82,1.00) 100%); }
+a.button.green:hover { background-image: -webkit-gradient(linear, 50.00% 0.00%, 50.00% 100.00%, color-stop( 0%, rgba(171,216,168,1.00)), color-stop( 100%, rgba(123,195,119,1.00))); background-image: -webkit-linear-gradient(270deg, rgba(171,216,168,1.00) 0%, rgba(123,195,119,1.00) 100%); background-image: linear-gradient(180deg, rgba(171,216,168,1.00) 0%, rgba(123,195,119,1.00) 100%); text-decoration:none;  }
+
