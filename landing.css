@@ -1,49 +1,16 @@
-@import  url(http://fonts.googleapis.com/css?family=Merriweather);
-
-/*
- * Font Configuration
- */
-/* Ultimate Helvetica Stack
- * via: https://gist.github.com/670835
- */
-/* regular */
-.sans-regular {
-  font-family: HelveticaNeue, "Helvetica Neue", HelveticaNeueRoman, HelveticaNeue-Roman, "Helvetica Neue Roman", Helvetica, Tahoma, Geneva, Arial, sans-serif;
-  font-weight: 400;
-  font-stretch: normal;
-  -webkit-font-stretch: normal;
-}
-
-/* regular bold */
-.sans-regular-bold {
-  font-family: HelveticaNeueBold, "Helvetica Neue Bold", HelveticaNeueRomanBold, HelveticaNeue-Roman-Bold, "Helvetica Neue Roman Bold", TeXGyreHerosBold, Helvetica, Tahoma, Geneva, Arial, sans-serif;
-  font-weight: 700;
-  font-stretch: normal;
-  -webkit-font-stretch: normal;
-}
-
-/* condensed */
-.sans-condensed {
-  font-family: HelveticaNeueCondensedBold, HelveticaNeue-CondensedBold, "Helvetica Neue Condensed Bold", HelveticaNeueRomanCondensedBold, HelveticaNeue-Roman-CondensedBold, "Helvetica Neue Roman Condensed Bold", HelveticaNeue, "Helvetica Neue", HelveticaNeueRoman, HelveticaNeue-Roman, "Helvetica Neue Roman", TeXGyreHerosCnRegular, Helvetica, Tahoma, Geneva, "Arial Narrow", Arial, sans-serif;
-  font-weight: 400;
-  font-stretch: condensed;
-}
-
-/* condensed bold */
-.sans-condensed-bold {
+* {
+/* make sure firefox honors the proper box model */
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 h2 {
   margin-bottom: 15px;
   padding: 0;
   font-size: 20px;
-}
-
-* {
-/* make sure firefox honors the proper box model */
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
 }
 
 /* Static header */
@@ -64,15 +31,13 @@ html {
 }
 
 body {
-  background-color: #42413C;
-  background-image: url(images/bg.gif);
-  background-repeat: repeat;
-  background-position: center center;
-  text-align: left;
+  background-color: #F7F7F7;
+  font-family: Merriweather;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 22px;
   color: #666;
-  margin: 0;
-  padding: 0;
-  font: 12px/16px merriweather;
 }
 
 .container {
@@ -139,59 +104,40 @@ table.width-divider {
  * Links
  */
 a {
-  color: #000;
+  color: #27AE60;
   text-decoration: none;
 /* unless you style your links to look extremely unique, it's best to provide underlines for quick visual identification */
 }
 
-a:hover {
-  color: #73c26d;
+a:hover,a.selected {
+  color: #000;
   text-decoration: none;
 }
 
-a.selected {
-  color: #72c26d;
-  text-decoration: none;
+a.gray {
+  color: #B2B2B2;
+}
+
+a.gray:hover {
+  color: #000;
 }
 
 /* links in content text should be like this */
-p a {
-  color: #73c26d;
-  text-decoration: underline;
-}
-
-p a:hover {
-  color: #000;
-  text-decoration: underline;
-}
-
 .black a {
   color: #fff;
 }
 
-em {
+.black a:hover {
+  color: #27AE60;
 }
 
-.blurb em {
-  font-style: normal;
+.black .signup {
+  color: #27AE60;
 }
 
 .body-sign-up {
   text-transform: uppercase;
   font-size: 15px;
-}
-
-em a,.black em a {
-  color: #72c26d;
-  text-decoration: underline;
-  font-style: normal;
-  text-transform: uppercase;
-  font-size: 11px;
-}
-
-.black em a:hover {
-  color: #fff;
-  text-decoration: underline;
 }
 
 .job a {
@@ -211,7 +157,6 @@ a.vote.yes {
   background-position: 0 0;
   margin-right: 4px;
   margin-bottom: 5px;
-  margin-left: 4px;
 }
 
 a.vote.yes:hover {
@@ -228,7 +173,7 @@ a.vote.no {
   background-position: 0 0;
   margin-bottom: 4px;
   margin-right: 5px;
-  margin-left: 4px;
+  margin-left: 5px;
 }
 
 a.vote.no:hover {
@@ -236,7 +181,7 @@ a.vote.no:hover {
 }
 
 .vote.counter {
-  font-family: Merriweather, MerriweatherRegular, Georgia, Times, serif;
+  font-family: Merriweather, serif;
   font-size: 18px;
   line-height: 18px;
   color: #fff;
@@ -246,13 +191,13 @@ a.vote.no:hover {
   float: left;
   margin-bottom: 4px;
   margin-right: 0;
-  margin-left: 4px;
+  margin-left: 5px;
 }
 
 div.vote {
   float: left;
   margin-top: 16px;
-  margin-left: 6px;
+  margin-left: 20px;
 }
 
 /*
@@ -274,11 +219,23 @@ div.vote {
 /*
  * Headers
  */
-h1,h2,h3,h4,h5,h6 {
-  font-family: HelveticaNeueCondensedBold, HelveticaNeue-CondensedBold, "Helvetica Neue Condensed Bold", HelveticaNeueRomanCondensedBold, HelveticaNeue-Roman-CondensedBold, "Helvetica Neue Roman Condensed Bold", HelveticaNeue, "Helvetica Neue", HelveticaNeueRoman, HelveticaNeue-Roman, "Helvetica Neue Roman", TeXGyreHerosCnRegular, Helvetica, Tahoma, Geneva, "Arial Narrow", Arial, sans-serif;
+h2,h3,h4,h5,h6 {
+  font-family: Helvetica, Arial, sans-serif;
   font-weight: 400;
-  font-stretch: condensed;
+}
+
+.category {
+  color: #666;
+  font-family: Helvetica, Arial, sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  display: block;
   text-transform: uppercase;
+}
+
+.actions {
+  color: #E74C3C;
+  margin-bottom: 10px;
 }
 
 /* Fancy Header Thing */
@@ -305,35 +262,35 @@ h1,h2,h3,h4,h5,h6 {
 @media -webkit-min-device-pixel-ratio0 {
   /* this selects only webkit browsers, inclding Mobile Safari on iOS */
   /*
-  #logo-bitmap { display: none; }
-  #logo-vector { display: block; }
-  
-  h1#thespark {
-      font-family: "Merriweather", "MerriweatherRegular", "Georgia", "Times", serif;
-      font-weight: normal;
-      font-size: 141px;
-      width: 100%;
-      text-align: center;
-      line-height: 1.15em;
-      text-transform: none;
-  	
-  	overflow: visible;
-  	white-space: nowrap;
-  	margin-top: 30px;
-  	
-      color: #000;
-  }
-  
-  #tagline {
-      font-family: "Merriweather", "MerriweatherRegular", "Georgia", "Times", serif;
-      font-size: 21px;
-      font-weight: normal;
-      margin-top: -16px;
-      margin-left: 26px;
+    #logo-bitmap { display: none; }
+    #logo-vector { display: block; }
+    
+    h1#thespark {
+        font-family: "Merriweather", "MerriweatherRegular", "Georgia", "Times", serif;
+        font-weight: normal;
+        font-size: 141px;
+        width: 100%;
+        text-align: center;
+        line-height: 1.15em;
+        text-transform: none;
+        
+      overflow: visible;
+      white-space: nowrap;
+      margin-top: 30px;
       
-      color: #000;
-  }
-  */
+        color: #000;
+    }
+    
+    #tagline {
+        font-family: "Merriweather", "MerriweatherRegular", "Georgia", "Times", serif;
+        font-size: 21px;
+        font-weight: normal;
+        margin-top: -16px;
+        margin-left: 26px;
+        
+        color: #000;
+    }
+    */
   
 
 }
@@ -358,11 +315,12 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 h1 {
-  text-transform: uppercase;
+  font-family: Helvetica, Arial, sans-serif;
+  font-style: normal;
   font-weight: 700;
-  font-size: 32px;
-  line-height: 62px;
-  margin: 0;
+  font-size: 16px;
+  line-height: 40px;
+  margin-top: 19px;
 }
 
 /*
@@ -370,7 +328,7 @@ h1 {
  */
 hr.section {
   width: 100%;
-  height: 4px;
+  height: 5px;
   margin: 10px 0;
   border: none;
   border-top: 1px solid #ccc;
@@ -378,12 +336,16 @@ hr.section {
 }
 
 p.blurb {
-  font-family: Merriweather, MerriweatherRegular, Georgia, Times, serif;
+  font-family: Merriweather, serif;
   font-size: 20px;
-  line-height: 28px;
+  line-height: 30px;
   font-weight: 400;
   color: #666;
   margin: 20px;
+}
+
+p {
+  margin-bottom: 20px;
 }
 
 #content-home,#content-jobs {
@@ -401,7 +363,7 @@ p.blurb {
 }
 
 .get-involved h2 {
-  font-family: Merriweather, MerriweatherRegular, Georgia, Times, serif;
+  font-family: Merriweather, serif;
   text-transform: none;
 }
 
@@ -415,34 +377,34 @@ p.blurb {
   display: block;
   float: left;
   width: 300px;
-  font-size: 14px;
-  margin-top: 10px;
-  margin-bottom: 6px;
+  font-size: 18px;
+  margin-top: 28px;
   margin-right: 20px;
-  text-transform: uppercase;
+  text-transform: Capitalize;
 }
 
-.get-involved ul li a {
-  text-decoration: underline;
-  color: #72c26d;
+ul {
+  margin: 10px 20px 20px 20px
 }
 
-.get-involved ul li a:hover {
-  color: #000;
+li.job {
+  text-decoration: none;
 }
 
 .job {
-  margin-bottom: 40px;
-}
-
-.job p {
-  font-size: 12px;
-  line-height: 18px;
+  margin: 30px 0;
+  border-bottom: 1px solid #ccc;
 }
 
 .job h3 {
-  font-size: 16px;
-  line-height: 28px;
+  font-size: 20px;
+  line-height: 20px;
+  margin-bottom: 10px;
+}
+
+.job-title {
+  text-decoration: none !important;
+  border: 0;
 }
 
 /*
@@ -450,7 +412,7 @@ p.blurb {
  */
 .issue {
   font-size: 14px;
-  line-height: 20px;
+  line-height: 22px;
   margin-top: 40px;
 }
 
@@ -478,6 +440,9 @@ p.blurb {
   margin-bottom: -20px;
 }
 
+.blurb {
+}
+
 .shadow {
   background: url(images/issue-shadow.png) center top;
   width: 100%;
@@ -495,33 +460,31 @@ p.blurb {
 
 .issue-container {
   clear: both;
+  margin-top: 10px;
+  display: inline-block;
+  border: 1px solid #eee
 }
 
 .issue-issue {
   width: 100%;
   background-color: #FFF;
-  border: 1px solid #dadada;
   padding: 20px;
 }
 
-.issue-a-title {
-  font-size: 24px;
-  line-height: 30px;
+.issue-a-title,.issue-a-title a {
+  font-size: 20px;
+  line-height: 28px;
   margin-bottom: 10px;
   color: #000;
   font-weight: 700;
 }
 
-.issue-details {
-  font-family: Helvetica, arial, sans-serif;
+.issue-details,.issue-solution-details {
+  font-family: Merriweather;
   font-size: 12px;
-  margin-top: 10px;
-  color: #999;
-}
-
-.issue-solution-details {
-  font-family: Helvetica, arial, sans-serif;
-  font-size: 12px;
+  font-style: italic;
+  color: #B2B2B2;
+  margin-bottom: 20px;
 }
 
 .issue-c-body {
@@ -557,11 +520,10 @@ a.issue-video-button {
 }
 
 .issue-solution {
-  background-color: #f3f3f3;
-  border: 1px solid #dadada;
+  background-color: #F7F7F7;
   padding: 22px;
-  font-size: 12px;
-  line-height: 16px;
+  font-size: 14px;
+  line-height: 22px;
   margin-top: 12px;
   clear: both;
 }
@@ -730,7 +692,7 @@ img {
 }
 
 .overlay .signup h2,.overlay .signup .info {
-  font-family: Merriweather, MerriweatherRegular, Georgia, Times, serif;
+  font-family: Merriweather, serif;
 }
 
 .overlay .signup h2 {
@@ -773,7 +735,7 @@ img {
   padding: 0;
   color: transparent;
   font-size: 14px;
-  font-family: Merriweather, MerriweatherRegular, Georgia, Times, serif;
+  font-family: Merriweather, serif;
   width: 186px;
   height: 43px;
   border: none;
