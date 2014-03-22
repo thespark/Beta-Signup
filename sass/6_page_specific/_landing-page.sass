@@ -4,10 +4,13 @@
   color: #fff
   font-weight: normal
   text-align: center
+  @include medium
+    .margin-bottom
+      margin-bottom: $base/2
   .padding-header
     padding-top: $base*3
     @include medium
-      padding-top: $base*2
+      padding-top: $base/2
   .logo
     background: url('../images/logo.svg') no-repeat center center
     height: 80px
@@ -43,6 +46,10 @@
   input, .button
     height: 50px
     @include font-size(18px)
+    @include small
+      @include font-size(16px)
+      text-align: center
+
 
   .button
     height: 50px
@@ -67,6 +74,7 @@
             text-transform: capitalize
             color: #fff
             display: inline-block
+
           a:hover
             color: $green
         li + li
@@ -74,6 +82,28 @@
         .copyright
           font-family: $h
           color: $gray
+
+        @include medium
+          li
+            width: 100%
+            display: block
+            a
+              width: 100%
+              border-radius: $border-radius
+              background-color: rgba(#fff, .1)
+              display: block
+              height: 40px
+              line-height: 40px
+              color: #fff
+            a:hover
+              background-color: rgba(#fff, .2)
+              color: #fff
+
+          li + li
+            margin-left: 0
+            margin-top: $base/2
+
+
 
 
   h1
