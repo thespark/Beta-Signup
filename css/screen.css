@@ -824,13 +824,12 @@ a.load-more {
 /* line 6, ../sass/1_general/_video.sass */
 .videoWrapper img {
   display: inline-block;
-  border: 2px solid black;
   transition: all 0.15s ease-in-out; }
-/* line 11, ../sass/1_general/_video.sass */
+/* line 10, ../sass/1_general/_video.sass */
 .videoWrapper img:hover {
   border: 2px solid #27ae60; }
 
-/* line 14, ../sass/1_general/_video.sass */
+/* line 13, ../sass/1_general/_video.sass */
 .videoWrapper iframe {
   position: absolute;
   top: 0;
