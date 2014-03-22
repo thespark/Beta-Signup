@@ -7,6 +7,9 @@
   @include medium
     .margin-bottom
       margin-bottom: $base/2
+  @include small
+    background-size: 500px
+
   .padding-header
     padding-top: $base*3
     @include medium
@@ -38,6 +41,7 @@
       display: inline-block
       border: 1px solid lighten(#333, 10%)
       box-shadow: 0 0 10px rgba(#fff, .2)
+      display: inline-block
   a:hover  
     img
       border: 1px solid $green
