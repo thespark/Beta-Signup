@@ -2655,6 +2655,10 @@ input[type=file] {
   width: 100%;
   max-width: 1000px;
   padding: 0 54px; }
+  @media only screen and (max-width: 40.625em) {
+    /* line 91, ../sass/6_page_specific/_landing-page.sass */
+    .landing-page {
+      padding: 27px; } }
 
 /* line 1, ../sass/7_browser_specific/_firefox.sass */
 .fix-select {
