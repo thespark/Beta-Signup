@@ -1,0 +1,70 @@
+.create-a-spark
+  section
+    padding: $base
+    header
+      overflow: auto
+      @include meta-header
+      .meta-header
+        padding-top: 10px
+        
+a.button.small
+  font-size: $font-size*1.1
+  height: 25px
+  line-height: 25px
+  padding: 0 15px
+
+#upload-target
+  width: 150px
+  height: 150px
+  position: relative
+  border-radius: $border-radius
+  float: left
+  cursor: pointer
+  transition: all .15s ease-in-out
+  // background: url('#{$image}/upload.svg') no-repeat
+  background-position: center center
+  background-color: #ededed
+  text-align: center
+  line-height: 150px
+  overflow: hidden
+
+  img
+    position: absolute
+    margin: auto
+    top: 0
+    right: 0
+    bottom: 0
+    left: 0
+    max-height: 150px
+    max-width: 150px
+
+#upload-target:hover
+  // border: 2px dashed darken(#ededed, 20%)
+  background-color: darken(#ededed, 5%)
+
+.upload-dash
+  border: 2px dashed darken(#ededed, 20%)
+
+#upload-target:after 
+  /* Drag Prevention */
+  content: ""
+  position: absolute
+  top: 0
+  left: 0
+  width: 100%
+  height: 100%
+
+.image-upload-area
+  @include input
+  color: $gray
+  box-shadow: none
+  background-color: #fff
+  padding: $base/2
+  overflow: auto
+
+input[type=file]
+  font-family: $h
+  display: block
+
+.upload-right
+  margin-left: 170px

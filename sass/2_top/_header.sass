@@ -1,0 +1,249 @@
+//-#################### HEADER ####################
+.spark-header
+  position: fixed
+  z-index: 90
+  height: 80px
+  background: $black url('#{$image}/header.jpg') no-repeat center top
+  @mixin drop-shadow
+  // border-top: 2px solid $green
+  font-family: $h
+  font-size: .875em
+  line-height: 40px
+  font-weight: normal
+  text-align: center
+  color: #fff
+  @media only screen and (max-width : $small)
+    position: static
+    z-index: 0
+
+
+  //-#################### LOGO ####################
+  a.logo
+    position: absolute
+    left: 50%
+    z-index: 90
+    margin-left: -105px
+    margin-top: 2px
+    width: 210px
+    height: 80px
+    background: url('#{$image}/logo.svg') no-repeat
+    background-position: 0 0
+    display: inline-block
+    @media only screen and (max-width : $medium)
+      width: 170px
+      height: 60px
+      margin-left: -85px
+      background: url('#{$image}/logo-small.svg') no-repeat
+    .no-svg &
+      margin-top: 2px
+      width: 210px
+      height: 80px
+      background: url('#{$image}/logo.png') no-repeat
+      background-position: 0 0
+      display: inline-block
+      @media only screen and (max-width : $medium)
+        width: 170px
+        height: 60px
+        background: url('#{$image}/logo-small.png') no-repeat
+
+  #header-left, #header-right
+    position: absolute
+    top: 20px
+    width: 50%
+
+  //-#################### HEADER LEFT ####################
+  #header-left
+    left: $base
+    @media only screen and (max-device-width : $medium)
+      left: $base/2
+
+
+  //-#################### HEADER RIGHT ####################
+  #header-right
+    right: $base
+    .create-a-spark, .home, .profile-container
+      float: right
+    @media only screen and (max-device-width : $medium)
+      right: $base/2  
+    .profile-container
+      img
+        width: 40px
+
+//-#################### BUTTONS ####################
+
+//--------------------- GLOBAL BUTTON ATTRIBUTES ---------------------
+
+a.header
+  padding: 0
+  box-shadow: 0 0 0
+  //--------------------- BUTTONS SIZES ---------------------
+  &.categories
+    width: 173.5px
+    height: 40px
+    padding-left: 50px
+    float: left
+    text-transform: capitalize
+    text-align: left
+    padding-right: $base/2
+    white-space: nowrap
+    overflow: hidden
+    text-overflow: ellipsis
+    @media only screen and (max-width : $medium)
+      width: 40px
+      padding-left: 0
+  &.search
+    width: 40px
+    height: 40px
+  &.create-a-spark
+    width: 40px
+    height: 40px
+    margin-right: $base/2
+    @media only screen and (max-width : $medium)
+      display: none
+  &.notifications
+    width: 40px
+    height: 40px
+  &.home
+    width: 40px
+    height: 40px
+    margin-right: $base/2
+    @media only screen and (max-width : $medium)
+      display: none
+  &.signin
+    width: 80px
+    height: 40px
+    margin-right: $base/2
+    float: right
+    @media only screen and (max-width : $medium)
+      display: none
+  &.signup
+    width: 80px
+    height: 40px
+    float: right
+    @media only screen and (max-width : $medium)
+      display: none
+  &.signinsignup
+    width: 40px
+    height: 40px
+    float: right
+    @media only screen and (min-width : $medium)
+      display: none
+  &.profile-container
+    width: 64px
+    height: 40px
+    @media only screen and (max-width : $small)
+      width: 40px
+      
+  // --------------------- BUTTONS ICON POSITIONS ---------------------
+  &.categories
+    @include svg
+    background-position: 0px -755px
+    background-color: $header-gray
+    @media only screen and (max-width : $medium)
+      padding-left: 0
+      background-position: -5px -755px
+  &.categories:hover
+    background-color: $header-gray-hover
+  &.categories.selected
+    background-color: $header-gray-hover
+  .no-svg
+    a.categories
+      @include no-svg
+      background-position: 0px -755px
+      background-color: $header-gray
+    a.categories:hover
+      background-color: $header-gray-hover
+    a.categories.selected
+      background-color: $header-gray-hover
+
+
+  &.search
+    @include svg
+    background-position: -5px -905px
+    background-color: $header-gray
+  &.search:hover
+    background-color: $header-gray-hover  
+  .no-svg
+    a.search
+      @include no-svg
+      background-position: -5px -905px
+      background-color: $header-gray
+    a.search:hover
+      background-color: $header-gray-hover 
+
+  &.create-a-spark
+    @include svg
+    background-position: -5px -955px
+    background-color: $green
+  &.create-a-spark:hover
+    background-color: lighten($green, 10%)
+  .no-svg
+    a.create-a-spark
+      @include no-svg
+      background-position: -5px -955px
+      background-color: $green
+    a.create-a-spark:hover
+      background-color: lighten($green, 7%)
+
+  &.signinsignup
+    @include svg
+    background-position: -5px -1605px
+    background-color: $green
+  &.signinsignup:hover
+    background-color: lighten($green, 10%)
+  .no-svg
+    a.signinsignup
+      @include no-svg
+      background-position: -5px -1605px
+      background-color: $green
+    a.signinsignup:hover
+      background-color: lighten($green, 7%)
+
+  &.home
+    @include svg
+    background-position: -5px -1005px
+    background-color: $header-gray
+  &.home:hover
+    background-color: $header-gray-hover
+  .no-svg
+    a.home
+      @include no-svg
+      background-position: -5px -1005px
+      background-color: $header-gray
+    a.home:hover
+      background-color: $header-gray-hover
+
+  &.profile-container
+    background: url('#{$image}/menu-arrow.svg') no-repeat
+    background-position: 44px 17px
+    background-color: $header-gray
+  &.profile-container:hover
+    background-color: $header-gray-hover
+  &.profile-container.selected
+    background-color: $header-gray-hover
+  .no-svg
+    a.profile-container
+      background: url('#{$image}/menu-arrow.png') no-repeat
+      background-position: 65px 30px
+      background-color: $header-gray
+    a.profile-container:hover
+      background-color: $header-gray-hover
+
+  &.signin
+    background-color: $header-gray
+  &.signin:hover
+    background-color: $header-gray-hover
+
+  &.signup
+    background-color: $green
+  &.signup:hover
+    background-color: lighten($green, 7%)
+
+
+
+
+
+
+
+
+

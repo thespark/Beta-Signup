@@ -1,0 +1,126 @@
+@function calculateRem($size)
+  $remSize: $size / 16px
+  @return $remSize * 1rem
+
+@mixin font-size($size)
+  font-size: $size
+  font-size: calculateRem($size)
+
+//################ Media queries
+
+$small: 31.25em //500px
+$medium: 40.625em //650px
+$large: 58.4375em //935px
+
+@mixin small
+  @media only screen and (max-width : $small)
+    @content
+
+@mixin medium
+  @media only screen and (max-width : $medium)
+    @content
+
+@mixin large
+  @media only screen and (max-width : $large)
+    @content
+
+@mixin header-buttons
+  @media only screen and (max-width : 800px)
+    @content
+
+@mixin phone    
+  @media only screen and (max-device-width : $small)
+    @content
+
+//#################### SVG/PNG ####################
+@mixin svg
+  background: url('#{$image}/sprite.svg') no-repeat
+  
+@mixin no-svg
+  background: url('#{$image}/sprite.png') no-repeat
+
+//#################### DROP SHADOWS ####################
+@mixin drop-shadow
+  +box-shadow(0px 0px 8px rgba(0,0,0,0.5))
+
+//#################### META ####################
+@mixin meta-header
+  font-style: italic
+  font-size: .75em
+  line-height: 1.6
+  color: $light-gray
+  .category
+    // color: #000
+    font-family: $h
+    font-weight: 700
+    font-style: normal
+    font-size: 1.2em
+    // display: block
+    text-transform: capitalize
+    // margin-top: -4px
+    @media only screen and (max-width : $medium)
+      font-size: 1em
+      display: block
+
+@mixin meta-footer
+  font-style: italic
+  font-size: .75em
+  
+@mixin meta-trending
+  font-size: .75em
+
+
+//#################### MENU STYLE ####################
+@mixin menu-style
+  position: fixed
+  text-align: left
+  border-radius: 4px
+  background-color: #fff
+  @include drop-shadow
+  font: normal 12px $h
+  ul
+    li
+      a
+        color: $light-gray
+        height: $base*2
+        line-height: $base*2
+        display: block
+        padding: 0 $base*2 0 $base
+        border-bottom: $line
+      a:hover
+        color: $black
+        background-color: tint($black, 98%)
+      a.selected
+        color: $black
+        font-weight: bold
+    li
+      span.desktop-hide
+        @media only screen and (min-width : $small)
+          display: none
+    li:first-child
+      a
+        border-top-left-radius: 4px
+        border-top-right-radius: 4px
+    li:last-child
+      a
+        border-bottom-left-radius: 4px
+        border-bottom-right-radius: 4px
+        border-bottom: 0
+
+
+//#################### INPUT ####################
+@mixin input
+  display: block
+  width: 100%
+  height: $base*1.5
+  padding: 0 $base/2
+  border: $line
+  background-color: lighten($light-bg, 10%)
+  color: #000
+  @include font-size(14px)
+  font-family: $m
+  font-weight: 400
+  font-style: italic
+  transition: all .15s ease-in-out
+  @media only screen and (max-width : $small)
+    font-size: 14px

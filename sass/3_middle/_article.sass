@@ -1,0 +1,137 @@
+//#################### ALL POSTS ####################
+article, article.problem, article.solution, article.context, article.action, article.comment, article.detail, article.top-solution
+  position: relative
+  background-color: #fff
+  header, footer
+    @include meta-header
+  header
+    position: relative
+  .meta-header
+    padding-top: 10px
+    @media only screen and (max-width : $medium)
+      padding-top: 0px
+  .pic-upload
+    width: 100%
+  .pic-upload-container
+    max-height: 100%
+    overflow: hidden
+    @media only screen and (max-height : 900px)
+      max-height: 300px
+
+
+article.problem
+  @media only screen and (max-device-width : $medium)
+    p
+      display: none
+
+
+
+//#################### BUTTON ACTIONS ####################
+article.actions-buttons
+  margin-bottom: 1px
+  a
+    font-size: 1em
+    display: block
+    background-color: #fff
+    padding-bottom: $base/2
+  h1
+    font: bold .875em $h
+    text-transform: uppercase
+    color: $red
+  p
+    color: $black
+    font-weight: bold
+    font-size: .875em
+    // line-height: $font-size*1.8
+
+  a:hover, a.selected
+    background-color: $black
+    p
+      color: #fff
+
+
+//#################### POST ACTION ####################
+article.actions
+  h1
+    font: bold $font-size*1.8 $h
+    color: $red
+  h2
+    color: $red
+    display: block
+    font: bold $font-size*1.4 $h
+
+
+//#################### POST ACTION DETAIL ####################
+.actions-detail
+  footer
+    border-bottom: 5px solid $red
+
+
+//#################### ACTION DETAIL ####################
+// .actions-feed
+//   @media screen and (max-width: $venti)
+//     margin-left: 0px
+//   .category
+//     color: $red
+
+
+//#################### POST TOP-SOLUTION ####################
+article.top-solution
+  border-top: $line
+  background-color: $bg-gray
+  h1
+    font-family: $m
+    font-style: normal
+    font-weight: 700
+    font-size: 1.125em
+    letter-spacing: 0em
+    @media only screen and (max-width : $medium)
+      font-size: 1em //20px
+  @media only screen and (max-device-width : $medium)
+    display: none
+
+//#################### POST TRENDING ####################
+article.trending 
+  border-bottom: $line
+  // padding: 20px
+  header, footer
+    @include meta-trending
+  h1
+    font-size: .875em
+    letter-spacing: -.005em
+
+//#################### SETTINGS ####################
+article.settings
+
+  .content
+    margin: auto
+    width: 80%
+form
+  table
+    tr
+      height: 60px
+      width: 100%
+      border-bottom: $line
+      td
+        width: 100%
+    tr:last-child
+      border: 0
+
+
+article.problem2
+  padding: $base
+  .pic-upload-container
+    width: $base*2.5
+    height: $base*2.5
+    img
+      width: 100%
+      height: 100%
+      display: inline-block
+      border: 4px solid $bg
+  h1
+    font-size: 1.125em
+    // width: 70%
+  .meta-header
+    padding: 0
+  .meta-footer
+    // margin-left: $base*3

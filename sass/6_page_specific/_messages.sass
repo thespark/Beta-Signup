@@ -1,0 +1,80 @@
+//#################### MESSAGE GENERAL ####################
+.messages 
+  article
+    a
+      display: block
+      color: $black
+      padding: 20px
+    a:hover, a.selected
+      background-color: $black
+      color: #fff
+
+
+//#################### MESSAGE BUTTONS ####################
+.messages-buttons
+  article
+    margin-bottom: 1px
+    overflow: hidden
+    a
+      display: block
+      background-color: #fff
+      height: 70px
+      padding: 10px
+      img
+        margin-right: 20px
+      header
+        padding-bottom: 0px
+        h1
+          font: bold 12px $h
+          text-transform: uppercase
+          color: $red
+          padding-bottom: 0px
+      .content
+        padding: 8px 10px 10px 10px
+        p
+          font: bold 12px/18px $m
+          color: $black
+        .meta
+          font: normal 11px $h
+          color: $gray
+          padding-bottom: 5px
+    a:hover, a.selected
+      background-color: $black
+      .content
+        p
+          color: #fff
+
+
+//#################### MESSAGE FEED ####################
+.messages-feed
+  background-color: #fff
+  margin: 0 0 20px 0
+  padding: 0 0 0 0
+  article
+    overflow: auto
+    border-bottom: $line
+    padding: 20px 20px 30px 20px
+    margin: 0 0 0 0
+    aside
+      position: static
+      padding: 0 20px 0 0
+      float: left
+      img
+        margin: 0px
+    header
+      padding: 0 0 10px 0
+      height: auto
+    .content
+      margin-left: 50px
+  article:last-child
+    border: 0px
+  .add-a-comment
+    padding: 20px
+
+.actions-small
+  article
+    header
+      height: auto
+
+
+

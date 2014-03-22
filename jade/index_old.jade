@@ -1,0 +1,80 @@
+include layout
+
+block content
+
+  .container.global-width
+    .grid
+      #mc_embed_signup
+        form#mc-embedded-subscribe-form.validate(action='http://thespark.us6.list-manage.com/subscribe/post?u=2464cf7754052b9153148c53f&id=1a2854cfd8', method='post', name='mc-embedded-subscribe-form', novalidate='novalidate', target='_blank')
+          input#mce-EMAIL.email(name='EMAIL', placeholder='Email Address', required='required', type='email', value='')
+          .clear
+            input#mc-embedded-subscribe.button(name='subscribe', type='submit', value='Subscribe')
+
+
+        #header.container
+          #spark-logo
+            a.logo(href='index.html')
+              #logo-bitmap
+              #logo-vector
+                h1#thespark The Spark
+                h2#tagline Problem. Solution. Action.
+                span.clear  
+            a.back.hidden ← Back to Home
+        #content.container.content
+        #content-home.container.content
+          hr.section
+          p.blurb The Spark is the counterbalance to corporations and governments that defy the public interest. Users post and vote on PROBLEMS that we face as a global community. The most popular problems are voted to the top. Users then post and vote on SOLUTIONS so that the community can take ACTION. Once The Spark reaches critical mass, the global community will have a voice that is too loud to ignore. Spark the change YOU want to see in the world.
+            a.beta.signup(href='http://eepurl.com/q3Ihz') Sign up to our mailing list 
+            |.
+          hr.section
+          //- .issue.example
+            .prompt
+              h1.question Do these Problems concern you?
+              .vote
+                a.vote.yes(href='javascript:return(0);')
+                a.vote.no(href='javascript:return(0);')
+                span.vote.counter 638
+            .issue-container
+              .issue-issue
+                .issue-image
+                  a.issue-video-button(href='javascript:void(0);')
+                .issue-a-title
+                  a(href='javascript:void(0);') Company X has a long track record of workforce abuse.
+                .issue-details
+                  | Sparked by
+                  a.issue-author(href='javascript:void(0)') John Smith
+                  time.issue-timestamp(datetime='2012-09-06T00:16:00+00:00', title='on Wed Sept 6 00:25:00 UTC') 4 hours ago
+                  | in
+                  a.issue-category(href='javascript:void(0)') Human Rights
+                p
+                  | As of September 10, 2012 there have been 32 verified cases of negligence involving
+                  | child labor and unsafe working conditions. Most recently, the company's factories in
+                  | China failed an independent safety inspection. Company X's profits last quarter were
+                  | over $3B USD. Manufacturing an X shouldn't require human suffering.
+                .issue-details
+                  a.view.solutions.gray(href='javascript:void(0)')
+                    | 6
+                    | Solutions
+                  a.view.comments.gray(href='javascript:void(0)') 23 Comments
+                .issue-solution
+                  .category Top Solution
+                  .issue-solution-details
+                    | Sparked by
+                    a(href='javascript:void(0)') Anne Smith
+                    | on 5/16/12 at 11:34pm
+                  p
+                    | Let's send a clear message to the CEO of X: we demand
+                    | ethical treatment of all employees in their supply chain, including employees of
+                    | manufacturing partners. We want to know how and when they will mandate fair treatment,
+                    | and we will start by publicly asking the CEO of company X to commit to a specific
+                    | plan/timeframe. Let's get one million people to view this issue to ensure that we get
+                    | an adequate response!
+                  .category.actions Actions
+                  ul
+                    li
+                      a(href='javascript:void(0);') Sign this open letter
+                      | to the CEO by November 15th
+                    li Help us achieve one million participants by tweeting and posting this Spark
+                    li
+                      | Check back here on December 15th (the CEO's deadline to respond) to see if this
+                      | plan is adequate, or if we need to take additional action

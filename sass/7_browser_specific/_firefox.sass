@@ -1,0 +1,27 @@
+.fix-select
+  -moz-appearance: window
+
+@-moz-document url-prefix() 
+  select::-moz-focus-inner
+    border: 0
+    outline: 0
+  .fix-select-moz
+    -moz-appearance: none
+    outline: none
+    font-family: $h
+    font-weight: normal
+    font-size: $font-size*1.4
+    line-height: $font-size*4
+    color: $light-gray
+    width: 300px
+    @include svg
+    background-position: 255px -5px
+    background-color: #fff
+    border: $line-input
+    box-shadow: 0 2px 3px 0 tint($black, 90%)
+    border-radius: $border-radius
+    height: 40px
+    padding: 0
+    margin: 20px
+    focus: none
+    float: left

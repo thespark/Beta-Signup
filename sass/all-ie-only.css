@@ -1,0 +1,74 @@
+input[type="checkbox"]
+  height: 20px
+  width: 20px
+  focus: none
+  background-color: none
+  border: 0
+  box-shadow: 0 0 0 0
+  position: none
+  vertical-align: top
+  border-radius: 0
+  padding: 0
+input[type="checkbox"]:after 
+  height: 20px
+  width: 20px
+  focus: none
+  background-color: none
+  border: 0
+  box-shadow: 0 0 0 0
+  position: none
+  vertical-align: top
+  border-radius: 0
+  padding: 0
+input[type="checkbox"]:checked 
+  height: 20px
+  width: 20px
+  focus: none
+  background-color: none
+  border: 0
+  box-shadow: 0 0 0 0
+  position: none
+  vertical-align: top
+  border-radius: 0
+  padding: 0
+input[type="checkbox"]:checked:after 
+  height: 20px
+  width: 20px
+  focus: none
+  background-color: none
+  border: 0
+  box-shadow: 0 0 0 0
+  position: none
+  vertical-align: top
+  border-radius: 0
+  padding: 0
+
+label.labelIE
+  clear: both
+  display: block
+  font-size: 14px
+  font-style: italic
+  padding-bottom: 8px
+
+select
+  padding: 12px
+  height: auto
+  background-position: -9999px -9999px
+
+@mixin drop-shadow
+  .boxshadow &
+    box-shadow: 0px 0px 3px $black
+  .no-boxshadow &
+    border: $line-input
+
+@mixin drop-shadow-light
+  .boxshadow &
+    box-shadow: 0px 0px 10px lighten($black, 50%)
+  .no-boxshadow &
+    border: $line-input
+
+@mixin box-shadow-menu
+  .boxshadow &
+    box-shadow: 0px 0px 4px $light-gray
+  .no-boxshadow &
+    border: $line-input

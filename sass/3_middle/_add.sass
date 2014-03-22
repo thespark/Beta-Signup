@@ -1,0 +1,73 @@
+#add
+  header
+    padding-bottom: $base/2
+    border-bottom: $line
+    h1
+      font-size: 1.125em
+      font-weight: 400
+
+  background-color: #fff
+  padding: $base
+  .button
+    margin-left: $base*3
+  .container-right
+    margin-left: $base*1.5 + $base
+    @media only screen and (max-width : $medium)
+      margin-left: 0
+
+  .action-wrapper
+    z-index: 1
+    cursor: pointer
+    position: relative
+    padding-left: 40px
+    width: 100%
+    font-size: 14px
+
+    .input-wrapper
+      width: 100%
+      display: block
+      margin-left: $base
+      padding-right: 60px
+
+
+    .action-area
+      position: absolute
+      top: 0
+      height: $base*1.5
+      line-height: $base*1.5
+
+    .action-area.number
+      left: 0
+      width: 40px
+      text-align: center
+      color: $gray
+      font-weight: 400
+
+
+    .action-area.handle
+      z-index: 5
+      right: 0
+      width: 40px
+      @include svg
+      // background-color: $gray
+      background-position: -5px -1655px
+      @media only screen and (max-width : $medium)
+        // background-position: -5px -755px
+
+  .action-wrapper.entered
+    z-index: 1
+    cursor: pointer
+    position: relative
+    padding-left: $base
+    width: 100%
+    background-color: lighten($light-bg, 10%)
+    border-radius: $border-radius
+    min-height: $base*1.5
+    font-size: 14px
+    line-height: $base*1.5
+    font-weight: 700
+
+  .action-wrapper.entered:hover
+    transition: all .15s ease-in-out
+    -webkit-transition: all .15s ease-in-out
+    background-color: lighten($light-bg, 7%)    

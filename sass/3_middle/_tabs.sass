@@ -1,0 +1,65 @@
+// Tabs 
+.tabs
+  position: relative
+  font-family: $h
+  font-weight: bold
+  font-size: 14px
+  line-height: $base*1.5
+  background-color: $bg-gray
+  height: $base*1.5
+  // padding-right: 10px
+  margin-bottom: $base
+  @media only screen and (max-width : $small)
+    font-size: 12px
+
+  // basic black and red tab style
+  .black, .red
+    a
+      z-index: 1
+      position: relative
+      color: $black
+      text-align: center
+      display: inline-block
+      float: left
+      height: $base*1.5
+      width: 150px
+      @media only screen and (max-width : $small)
+        width: 100px
+
+  // black and red hover/selected colors
+  .black
+    a:hover, a.selected
+      color: #fff
+      background-color: $black
+
+  .red
+    a:hover, a.selected
+      color: #fff
+      background-color: $red
+
+
+  // black and red arrows
+  .black, .red
+    a.selected:after
+      z-index: 1
+      position: absolute
+      top: $base*1.5
+      left: 0
+      width: 150px
+      height: 8px
+      content: ""
+      @include svg
+
+  .black
+    a.selected:after
+      background-position: 50px -1372px
+      @media only screen and (max-width : $small)
+        width: 100px
+        background-position: 25px -1372px
+
+  .red
+    a.selected:after
+      background-position: 50px -1422px
+      @media only screen and (max-width : $small)
+        width: 100px
+        background-position: 25px -1422px

@@ -1,0 +1,172 @@
+*, *:before, *:after
+  +box-sizing(border-box)
+
+html
+  height: 100%
+  font-size: 100%
+body
+  height: 100%
+  font-family: $m
+  @include font-size(16px)
+  font-weight: 300
+  line-height: 1.5
+  color: #000
+  background: lighten($black, 93%)
+  text-rendering: optimizeLegibility
+
+h1
+  font-family: $m
+  font-style: normal
+  font-weight: 700
+  @include font-size(26px)
+  line-height: 1.5
+  @media only screen and (max-width : $medium)
+    font-size: 1.25em //20px
+  // @media only screen and (max-device-width : 900px)
+    // font-size: 1em //26px
+
+p
+  @include font-size(18px)
+  font-family: $m
+  font-style: normal
+  font-weight: 300
+  line-height: 1.618
+  color: $gray
+  @media only screen and (max-width : $medium)
+    font-size: .875em //14px
+
+.margin-top
+  margin-top: $base
+.margin-top-half
+  margin-top: $base/2
+.margin-right
+  margin-right: $base
+.margin-right-half
+  margin-right: $base/2
+.margin-bottom
+  margin-bottom: $base
+.margin-bottom-double
+  margin-bottom: $base*2
+  @include medium
+    margin-bottom: $base
+.margin-bottom-half
+  margin-bottom: $base/2
+.margin-bottom-third
+  margin-bottom: $base/3
+.margin-left
+  margin-left: $base
+.margin-left-half
+  margin-left: $base/2  
+.margin-left-61
+  margin-left: 61px
+  @media only screen and (max-width : $small)
+    margin-left: 0px
+.margin-left-122
+  margin-left: 122px
+.margin-left-button
+  margin-left: $base*1.5 + $base
+  @media only screen and (max-width : $medium)
+    margin-left: 0
+
+.article-padding
+  padding: $base $base 0 $base
+  @media only screen and (max-device-width : $medium)
+    padding: $base/1.5 $base/1.5 0 $base/1.5
+.article-padding-last
+  padding: $base
+  @media only screen and (max-device-width : $medium)
+    padding: $base/1.5
+.article-padding-left
+  padding-left: $base
+.article-padding-left-right
+  padding: 0px $base
+.article-padding-left-right-bottom
+  padding: 0px $base $base $base
+.article-padding-small
+  padding: $base/2 $base 0 $base
+.article-padding-small-last
+  padding: $base/2 $base
+  
+.padding-left
+  padding-left: $base/4
+  @include medium
+    padding-left: 0
+
+.padding-right
+  padding-right: $base/4
+
+.padding-left, .padding-right
+  @include medium
+    padding: 0
+
+.float-left
+  float: left
+.float-right
+  float: right
+.clear-float
+  clear: both
+
+img
+  display: block
+  border: none
+section
+  background-color: #fff
+.black
+  color: #000
+.green
+  color: $green
+.red
+  color: $red
+.user-pic
+  width: $base*1.5
+  height: $base*1.5
+  border-radius: 100px
+  @media only screen and (max-width : $medium)
+    display: none
+.truncate
+  display: -webkit-box
+  -webkit-line-clamp: 3
+  -webkit-box-orient: vertical
+  overflow: hidden
+  text-overflow: ellipsis
+.deleted-post 
+  font-family: $h
+  text-align: center
+  padding: 60px
+  opacity: 1
+  position: absolute
+  z-index: 20
+  width: 100%
+  height: 100%
+  background-color: $light-bg
+.connect
+  width: 140px
+.content 
+  clear: both
+.italic
+  font-style: italic
+.capitalize
+  text-transform: capitalize
+.hidden
+  display: none !important
+.rule
+  border-top: $line
+.small-text
+  font-family: $h
+  font-size: 12px
+  font-weight: normal
+  color: $light-gray
+.overflow
+  overflow: auto
+.mobile-hide
+  @media only screen and (max-width : $medium)
+    display: none
+.mobile-block
+  @media only screen and (max-width : $medium)
+    display: block
+
+.disabled
+  opacity: 0.5
+
+.line
+  border-bottom: 1px solid $light-gray

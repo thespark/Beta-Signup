@@ -1,0 +1,39 @@
+.page-title-wrapper
+  padding-top: 80px
+  @media only screen and (max-width : $small)
+    padding-top: 0
+  .page-title
+    font-family: $h
+    font-style: normal
+    font-weight: 700
+    font-size: 1em
+    line-height: $base*1.5
+    color: $black
+    width: 100%
+    height: $base*1.5
+    background-color: #FFF
+    .slash
+      padding: 0 $base/2
+      color: $light-gray
+    .left
+      position: absolute
+      left: 0
+      width: 80%
+      padding: 0 $base
+      white-space: nowrap
+      overflow: hidden
+      text-overflow: ellipsis
+      @media only screen and (max-width : $medium)
+        width: 100%
+      @media only screen and (max-device-width : $medium)
+        left: $base/2
+    .right
+      position: absolute
+      right: 0
+      padding: 0 $base
+
+      @media only screen and (max-width : $medium)
+        display: none
+    .submenu
+      a
+        padding-right: 15px

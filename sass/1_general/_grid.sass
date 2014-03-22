@@ -1,0 +1,76 @@
+//- Grid - Home, Problem Detail, Solution Detail, Activity
+//- Containers 
+#sticky-container
+  min-height: 100%
+  // height: auto !important
+  // height: 100%
+  // overflow: auto
+  margin-bottom: -60px
+
+#sticky-container:after 
+  content: ""
+  display: block
+  height: 60px
+
+.global-width
+  width: 100%
+
+// .push
+  clear: both
+  display: block
+  height: 100px
+  @media only screen and (max-width : $large)
+    display: none
+    height: 0px
+
+.grid
+  max-width: 1200px
+  padding: 0 $base
+  margin: auto
+  height: auto
+  overflow: auto
+  @media only screen and (max-device-width : $medium)
+    // min-width: 0px
+    padding: $base/2
+
+  .col70
+    width: 70%
+    @media only screen and (max-width : $large)
+      width: 100%
+      float: left
+  .col30
+    width: 30%
+    padding: 0 0 0 $base/2
+    @media only screen and (max-width : $large)
+      width: 100%
+      padding: 0
+      margin-top: $base
+
+  .col50
+    width: 50%
+    display: inline-block
+    float: left
+    @include medium
+      width: 100%
+      display: block
+
+  .col25
+    width: 25%
+
+  .col75
+    width: 75%
+
+  .col100
+    width: 100%
+
+  .col33
+    width: 33.33%
+    @media only screen and (max-width : $small)
+      width: 100%
+.create-a-spark, .settings, .contact, .privacy
+  max-width: 800px
+.grid.my-work
+  max-width: 1200px
+  .col30
+    padding: 0 $base/2 0 0
+

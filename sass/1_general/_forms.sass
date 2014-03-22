@@ -1,0 +1,203 @@
+//#################### REMOVE BROWSER STYLE ####################
+input[type=text], input[type=email], input[type=url], input[type=password], textarea, input[type=checkbox], input[type=submit], select, option, input[type=button], input[type=file], button
+  // margin: 0
+  // padding: 0
+  appearance: none
+  -webkit-appearance: none
+  -moz-appearance: none
+  outline: none
+
+select 
+  cursor: pointer
+
+label.labelIE
+  display: none
+
+//#################### INPUT FIELDS ####################
+  //--------------------- Normal Input Fields ---------------------
+input[type=text], input[type=email], input[type=url], input[type=password]
+  @include input
+  height: $base*1.5
+  padding: 0 $base/2
+
+
+textarea
+  @include input
+  transition: all .15s ease-in-out
+  padding: 8px $base/2
+  line-height: 1.5
+
+
+
+::-webkit-input-placeholder
+  color: $gray
+
+::-moz-placeholder
+  color: $gray
+
+::-moz-placeholder
+  color: $gray
+
+::-ms-input-placeholder
+  color: $gray
+
+
+input[type=text]:focus, input[type=email]:focus, input[type=url]:focus, input[type=password]:focus, textarea:focus, select:focus, option:focus, input[type=text]:hover, input[type=email]:hover, input[type=url]:hover, input[type=password]:hover, textarea:hover, select:hover, option:hover
+
+  color: $black
+  background-color: tint($black, 100%)
+  
+  //--------------------- Input Error Text ---------------------
+.error-text
+  font-family: $h
+  font-weight: normal
+  font-size: $font-size*1.2
+  line-height: $font-size*1.6
+  color: $red
+
+  //--------------------- Input Error ---------------------
+
+input.error-input[type=text], input.error-input[type=email], input.error-input[type=url], input.error-input[type=password], textarea.error-input
+  border-color: $red
+  color: $red
+  background-color: tint($red, 95%)
+  box-shadow: 0 0 10px 0 tint($black, 85%)
+
+input.error-input[type=text]:focus, input.error-input[type=email]:focus, input.error-input[type=url]:focus, input.error-input[type=password]:focus, textarea.error-input:focus, select.error-input:focus, option.error-input:focus
+  border-color: $red
+  color: $red
+  background-color: tint($red, 95%)
+  box-shadow: 0 0 10px 0 tint($black, 85%)
+
+
+//#################### TOGGLES ####################
+input[type="radio"] 
+  box-sizing: border-box
+  padding: 0
+
+.userActions, .userVotes, .userComments, .loginTwitter, .rememberToggle
+  border: $line-input
+  box-shadow: inset 0 0 5px 0 tint($black, 85%)
+  background-color: darken($light-bg, 3%)
+  border-radius: 30px
+  display: block
+  height: 30px
+  position: relative
+  width: 60px
+  & label 
+    line-height: 64px
+    text-transform: uppercase
+    -webkit-transition: color .2s ease
+    -moz-transition: color .2s ease
+    -ms-transition: color .2s ease
+    -o-transition: color .2s ease
+    transition: color .2s ease
+    width: 60px
+  & input 
+    cursor: pointer
+    height: 60px
+    left: 0
+    opacity: 0
+    position: absolute
+    top: 0
+    width: 60px
+    z-index: 2
+  & input:checked~.toggle 
+    left: 3px
+    box-shadow: 0 0 5px 0 tint($black, 85%)
+    background-color: $green
+  & input~:checked~.toggle 
+    left: 33px
+    box-shadow: 0 0 5px 0 tint($black, 85%)
+    background-color: $red
+  & input:checked 
+    z-index: 0
+
+.toggle
+  border-radius: 50%
+  height: 22px
+  left: 0
+  position: absolute
+  top: 3px
+  // -webkit-transition: left .3s ease
+  // -moz-transition: left .3s ease
+  // -ms-transition: left .3s ease
+  // -o-transition: left .3s ease
+  transition: left .3s ease
+  width: 22px
+  z-index: 1
+.remember
+  .rememberToggle
+    height: 20px
+    border-radius: 20px
+    width: 40px
+    float: left
+    & label 
+      width: 40px
+    & input 
+      height: 20px
+      width: 40px
+    & input:checked~.toggle 
+      left: 2px
+      background-color: $gray
+    & input~:checked~.toggle 
+      left: 21px
+      background-color: $black
+    & input:checked 
+      z-index: 0
+  .toggle
+    border-radius: 50%
+    height: 16px
+    left: 0
+    position: absolute
+    top: 1px
+    // -webkit-transition: left .3s ease
+    // -moz-transition: left .3s ease
+    // -ms-transition: left .3s ease
+    // -o-transition: left .3s ease
+    transition: left .3s ease
+    width: 16px
+    z-index: 1
+
+
+//#################### CATEGORIES DROPDOWN ####################
+select
+  position: relative
+  font-family: $m
+  font-weight: normal
+  font-style: italic
+  font-size: $font-size*1.4
+  line-height: $font-size*4
+  color: $gray
+  width: 100%
+  height: 40px
+  border: $line-input
+  box-shadow: 0 2px 3px 0 tint($black, 90%)
+  border-radius: $border-radius
+  padding-left: 12px
+  white-space: nowrap
+  text-overflow: ellipsis
+select:before
+  position: absolute
+  z-index: 10
+  top: 0
+  right: $base
+  content: ""
+  width: 20px
+  height: 20px
+  @include svg
+  background-position: 205px -5px
+option
+  font-size: $font-size*1.4
+  line-height: $font-size*1.6
+
+
+//#################### QUICK COMMENT FIELD ####################
+.comment-small
+  background-color: $light-bg
+  padding: 10px
+  input[type=text]
+    background-color: #fff
+    margin: 0 0 0 0   
+    box-shadow: 0 0 5px #eee inset
+

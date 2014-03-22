@@ -1,0 +1,75 @@
+$base: 27px	// Base unit 
+
+//#################### TYPOGRAPHY ####################
+$font-size: 10px
+$m: 'Merriweather'
+$h: Helvetica, Arial, sans-serif
+
+//#################### COLORS ####################
+// Green
+$green: #27AE60
+$light-green: lighten($green, 7%)
+$lighter-green: lighten($green, 14%)
+$light-green-bg: tint($green, 90%)
+
+
+// Red
+$red: #E74C3C
+$light-red: lighten($red, 7%)
+$lighter-red: lighten($red, 14%)
+$light-red-bg: tint($red, 90%)
+
+// Black
+$black: #000
+$light-bg: lighten(#000, 88%)
+
+// Gray
+$gray: lighten(#000, 60%)
+$light-gray: lighten(#000, 75%)
+$header-gray: lighten(#000, 18%)
+$header-gray-hover: lighten($header-gray, 7%)
+
+// Backgrounds
+$bg: lighten($black, 93%)
+$bg-gray: lighten($black, 98%)
+
+
+
+//#################### LAYOUT ####################
+$border-radius: 2px
+$border-radius-button: 4px
+$line: 1px solid lighten($black, 93%)
+$line-input: 1px solid lighten($black, 90%)
+
+
+//#################### IMAGES ####################
+$image: "http://assets.thespark.org/static/images"
+
+
+//#################### MEDIA QUERIES ####################
+$large: 58.4375em //935px
+$medium: 40.625em //650px
+$small: 31.25em //500px
+
+
+$legacy-support-for-ie: $legacy-support-for-ie6 or $legacy-support-for-ie7 or $legacy-support-for-ie8
+
+// Whether to output legacy support for mozilla.
+// Usually this means hacks to support Firefox 3.6 or earlier.
+$legacy-support-for-mozilla: true
+
+// Support for mozilla in experimental css3 properties (-moz).
+$experimental-support-for-mozilla      : true !default
+// Support for webkit in experimental css3 properties (-webkit).
+$experimental-support-for-webkit       : true !default
+// Support for webkit's original (non-standard) gradient syntax.
+$support-for-original-webkit-gradients : true !default
+// Support for opera in experimental css3 properties (-o).
+$experimental-support-for-opera        : true !default
+// Support for microsoft in experimental css3 properties (-ms).
+$experimental-support-for-microsoft    : true !default
+// Support for khtml in experimental css3 properties (-khtml).
+$experimental-support-for-khtml        : false !default
+// Support for svg in experimental css3 properties.
+// Setting this to true might add significant size to your
+// generated stylesheets.

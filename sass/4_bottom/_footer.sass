@@ -1,0 +1,102 @@
+//- Spark Footer 
+.spark-footer
+  background-color: $black
+  min-height: 350px
+  clear: both
+  h1, h2
+    font-weight: 400
+    color: #fff
+  p
+    font-size: 1em
+    color: #fff
+    @media only screen and (max-width : $medium)
+      font-size: .875em
+  .donate
+    padding-right: $base*2
+    width: 70%
+    @media only screen and (max-width : 770px)
+      width: 60%
+
+  .connect
+    .fb, .tw, .gp, .li
+      width: 18px
+      height: 18px
+      float: left
+      margin-right: 10px
+      overflow: hidden
+      background: url('#{$image}/spriteSocial.png') no-repeat
+    .fb
+      background-position: 0 0
+    .tw
+      background-position: -18px 0
+    .gp
+      background-position: -36px 0
+    .li
+      background-position: -54px 0
+    .fb, .tw, .gp, .li
+      @media only screen and (max-width : $medium)
+        display: none
+        float: none
+        margin-right: 0
+
+
+  .general
+    .copyright
+      font: bold $font-size*1.2 $h
+      color: $gray
+  .connect, .general
+    width: 15%
+    margin-top: 8px
+    @media only screen and (max-width : 770px)
+      width: 20%
+    @media only screen and (max-width : $medium)
+      width: 100%
+      margin-top: 0
+
+    h2
+      text-transform: capitalize
+
+  .connect a, .general a
+    font: bold 12px $h
+    text-transform: capitalize
+    text-align: left
+    color: #fff
+    @media only screen and (max-width : $medium)
+      height: 40px
+      width: 100%
+      background-color: $header-gray
+      display: inline-block
+      border-radius: $border-radius-button
+      text-align: center
+      line-height: 40px
+      font-size: .875em
+      font-weight: 400
+      max-width: 200px
+    @media only screen and (max-width : $small)
+      max-width: 2000px
+
+
+  .connect a:hover, .general a:hover
+    color: $gray
+    @media only screen and (max-width : $medium)
+      color: #fff
+      background-color: $header-gray-hover
+
+  .donate, .connect, .general
+    @media only screen and (max-width : $medium)
+      width: 100%
+      text-align: center
+      padding: 0 0 $base 0
+      border-bottom: 1px solid $header-gray
+      h1, h2
+        font-size: 1.3em
+
+  .general
+    border-bottom: 0
+    @media only screen and (max-width : $medium)
+      padding: 0
+
+
+  .donate
+    @media only screen and (max-device-width : $medium)
+      padding-top: $base/2

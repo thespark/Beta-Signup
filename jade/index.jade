@@ -1,0 +1,37 @@
+extends layout_landing
+
+block content
+
+  .container.global-width.padding-header
+    .grid.landing-page
+
+      #container
+        .margin-bottom-double
+          .logo
+
+        .margin-bottom-double
+          .intro 
+            span The Spark 
+            |is the 
+            span.italic counterbalance 
+            |to corporations and governments that 
+            span.italic defy 
+            |the public interest.
+
+        .margin-bottom-double
+          #containingBlock
+            .videoWrapper
+              a(href="#0" class="sublime" data-autoresize="fit")
+                img(src="../images/video.png")
+              video(id="0", width="1000", height="563", title="SpeakUp Intro", style="display:none", data-embed-type="auto", data-uid="0", data-autoresize="fit", preload="none")
+                source(src="http://player.vimeo.com/external/88948857.hd.mp4?s=462fe0603f070680693aac0ba27ec6ec", data-quality="hd")
+                source(src="http://player.vimeo.com/external/88948857.sd.mp4?s=f8104743d9f0d70080df1f29a78f168a")
+
+        .margin-bottom
+          form#mc-embedded-subscribe-form.validate(action='http://thespark.us6.list-manage.com/subscribe/post?u=2464cf7754052b9153148c53f&id=1a2854cfd8', method='post', name='mc-embedded-subscribe-form', novalidate='novalidate', target='_blank')
+
+            .col50.padding-right
+              input#mce-EMAIL.email(name='EMAIL', placeholder='Enter your email address...', required='required', type='email', value='').margin-bottom
+
+            .col50.padding-left
+              button(name='subscribe', type='submit', value='Subscribe').button.green.signup.width100 Subscribe to the newsletter
