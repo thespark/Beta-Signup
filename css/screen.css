@@ -337,22 +337,31 @@ section {
 .line {
   border-bottom: 1px solid #bfbfbf; }
 
-/* line 3, ../sass/1_general/_grid.sass */
+/* line 174, ../sass/1_general/_base.sass */
+.width100 {
+  width: 100%; }
+
+/* line 1, ../sass/1_general/_grid.sass */
 #sticky-container {
   min-height: 100%;
   margin-bottom: -60px; }
+  @media only screen and (max-width: 31.25em) {
+    /* line 1, ../sass/1_general/_grid.sass */
+    #sticky-container {
+      min-height: initial;
+      margin-bottom: 0; } }
 
-/* line 10, ../sass/1_general/_grid.sass */
+/* line 8, ../sass/1_general/_grid.sass */
 #sticky-container:after {
   content: "";
   display: block;
   height: 60px; }
+  @media only screen and (max-width: 31.25em) {
+    /* line 8, ../sass/1_general/_grid.sass */
+    #sticky-container:after {
+      height: initial; } }
 
 /* line 15, ../sass/1_general/_grid.sass */
-.global-width {
-  width: 100%; }
-
-/* line 26, ../sass/1_general/_grid.sass */
 .grid {
   max-width: 1200px;
   padding: 0 27px;
@@ -360,62 +369,62 @@ section {
   height: auto;
   overflow: auto; }
   @media only screen and (max-device-width: 40.625em) {
-    /* line 26, ../sass/1_general/_grid.sass */
+    /* line 15, ../sass/1_general/_grid.sass */
     .grid {
       padding: 13.5px; } }
-  /* line 36, ../sass/1_general/_grid.sass */
+  /* line 25, ../sass/1_general/_grid.sass */
   .grid .col70 {
     width: 70%; }
     @media only screen and (max-width: 58.4375em) {
-      /* line 36, ../sass/1_general/_grid.sass */
+      /* line 25, ../sass/1_general/_grid.sass */
       .grid .col70 {
         width: 100%;
         float: left; } }
-  /* line 41, ../sass/1_general/_grid.sass */
+  /* line 30, ../sass/1_general/_grid.sass */
   .grid .col30 {
     width: 30%;
     padding: 0 0 0 13.5px; }
     @media only screen and (max-width: 58.4375em) {
-      /* line 41, ../sass/1_general/_grid.sass */
+      /* line 30, ../sass/1_general/_grid.sass */
       .grid .col30 {
         width: 100%;
         padding: 0;
         margin-top: 27px; } }
-  /* line 49, ../sass/1_general/_grid.sass */
+  /* line 38, ../sass/1_general/_grid.sass */
   .grid .col50 {
     width: 50%;
     display: inline-block;
     float: left; }
     @media only screen and (max-width: 40.625em) {
-      /* line 49, ../sass/1_general/_grid.sass */
+      /* line 38, ../sass/1_general/_grid.sass */
       .grid .col50 {
         width: 100%;
         display: block; } }
-  /* line 57, ../sass/1_general/_grid.sass */
+  /* line 46, ../sass/1_general/_grid.sass */
   .grid .col25 {
     width: 25%; }
-  /* line 60, ../sass/1_general/_grid.sass */
+  /* line 49, ../sass/1_general/_grid.sass */
   .grid .col75 {
     width: 75%; }
-  /* line 63, ../sass/1_general/_grid.sass */
+  /* line 52, ../sass/1_general/_grid.sass */
   .grid .col100 {
     width: 100%; }
-  /* line 66, ../sass/1_general/_grid.sass */
+  /* line 55, ../sass/1_general/_grid.sass */
   .grid .col33 {
     width: 33.33%; }
     @media only screen and (max-width: 31.25em) {
-      /* line 66, ../sass/1_general/_grid.sass */
+      /* line 55, ../sass/1_general/_grid.sass */
       .grid .col33 {
         width: 100%; } }
 
-/* line 70, ../sass/1_general/_grid.sass */
+/* line 59, ../sass/1_general/_grid.sass */
 .create-a-spark, .settings, .contact, .privacy {
   max-width: 800px; }
 
-/* line 72, ../sass/1_general/_grid.sass */
+/* line 61, ../sass/1_general/_grid.sass */
 .grid.my-work {
   max-width: 1200px; }
-  /* line 74, ../sass/1_general/_grid.sass */
+  /* line 63, ../sass/1_general/_grid.sass */
   .grid.my-work .col30 {
     padding: 0 13.5px 0 0; }
 
@@ -2538,39 +2547,43 @@ input[type=file] {
     border-bottom: 1px solid #ededed; }
 
 /* line 1, ../sass/6_page_specific/_landing-page.sass */
+.landing-page {
+  width: 100%;
+  max-width: 900px;
+  padding: 0 27px; }
+  @media only screen and (max-width: 40.625em) {
+    /* line 1, ../sass/6_page_specific/_landing-page.sass */
+    .landing-page {
+      padding: 27px; } }
+
+/* line 8, ../sass/6_page_specific/_landing-page.sass */
 .landing {
   background: black url("../images/bg.jpg") top center no-repeat;
   background-position: center -200px;
   color: white;
   font-weight: normal;
-  text-align: center; }
+  text-align: center;
+  padding-top: 54px; }
   @media only screen and (max-width: 40.625em) {
     /* line 8, ../sass/6_page_specific/_landing-page.sass */
-    .landing .margin-bottom {
-      margin-bottom: 13.5px; } }
+    .landing {
+      padding-top: 13.5px; } }
   @media only screen and (max-width: 31.25em) {
-    /* line 1, ../sass/6_page_specific/_landing-page.sass */
+    /* line 8, ../sass/6_page_specific/_landing-page.sass */
     .landing {
       background-size: 500px; } }
-  /* line 13, ../sass/6_page_specific/_landing-page.sass */
-  .landing .padding-header {
-    padding-top: 81px; }
-    @media only screen and (max-width: 40.625em) {
-      /* line 13, ../sass/6_page_specific/_landing-page.sass */
-      .landing .padding-header {
-        padding-top: 13.5px; } }
-  /* line 17, ../sass/6_page_specific/_landing-page.sass */
-  .landing .logo {
+  /* line 20, ../sass/6_page_specific/_landing-page.sass */
+  .landing .logo-landing {
     background: url("../images/logo.svg") no-repeat center center;
     height: 80px; }
     @media only screen and (max-width: 40.625em) {
-      /* line 17, ../sass/6_page_specific/_landing-page.sass */
-      .landing .logo {
-        height: 40px; } }
-  /* line 22, ../sass/6_page_specific/_landing-page.sass */
+      /* line 20, ../sass/6_page_specific/_landing-page.sass */
+      .landing .logo-landing {
+        height: 60px; } }
+  /* line 25, ../sass/6_page_specific/_landing-page.sass */
   .landing a {
     transition: all 0.15s ease-in-out; }
-  /* line 24, ../sass/6_page_specific/_landing-page.sass */
+  /* line 27, ../sass/6_page_specific/_landing-page.sass */
   .landing .intro {
     font-size: 36px;
     font-size: 2.25rem;
@@ -2580,61 +2593,68 @@ input[type=file] {
     border-bottom: 1px solid #4d4d4d;
     padding: 13.5px 0; }
     @media only screen and (max-width: 58.4375em) {
-      /* line 24, ../sass/6_page_specific/_landing-page.sass */
+      /* line 27, ../sass/6_page_specific/_landing-page.sass */
       .landing .intro {
         font-size: 26px;
         font-size: 1.625rem; } }
-    @media only screen and (max-width: 58.4375em) {
-      /* line 24, ../sass/6_page_specific/_landing-page.sass */
+    @media only screen and (max-width: 40.625em) {
+      /* line 27, ../sass/6_page_specific/_landing-page.sass */
       .landing .intro {
         font-size: 22px;
         font-size: 1.375rem; } }
-  /* line 36, ../sass/6_page_specific/_landing-page.sass */
+    @media only screen and (max-width: 31.25em) {
+      /* line 27, ../sass/6_page_specific/_landing-page.sass */
+      .landing .intro {
+        font-size: 16px;
+        font-size: 1rem; } }
+  /* line 41, ../sass/6_page_specific/_landing-page.sass */
   .landing .bold {
     font-weight: 700; }
-  /* line 39, ../sass/6_page_specific/_landing-page.sass */
+  /* line 44, ../sass/6_page_specific/_landing-page.sass */
   .landing a img {
     width: 100%;
     display: inline-block;
     border: 1px solid #4d4d4d;
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
     display: inline-block; }
-  /* line 46, ../sass/6_page_specific/_landing-page.sass */
+  /* line 51, ../sass/6_page_specific/_landing-page.sass */
   .landing a:hover img {
     border: 1px solid #27ae60;
     box-shadow: 0 0 15px rgba(39, 174, 96, 0.8); }
-  /* line 50, ../sass/6_page_specific/_landing-page.sass */
+  /* line 55, ../sass/6_page_specific/_landing-page.sass */
   .landing input, .landing .button {
     height: 50px;
-    font-size: 18px;
-    font-size: 1.125rem; }
-    @media only screen and (max-width: 31.25em) {
-      /* line 50, ../sass/6_page_specific/_landing-page.sass */
+    font-size: 16px;
+    font-size: 1rem; }
+    @media only screen and (max-width: 40.625em) {
+      /* line 55, ../sass/6_page_specific/_landing-page.sass */
       .landing input, .landing .button {
-        font-size: 16px;
-        font-size: 1rem;
+        font-size: 14px;
+        font-size: 0.875rem;
         text-align: center; } }
-  /* line 58, ../sass/6_page_specific/_landing-page.sass */
-  .landing .button {
-    height: 50px;
-    line-height: 50px;
-    padding: 0; }
-  /* line 63, ../sass/6_page_specific/_landing-page.sass */
+  /* line 61, ../sass/6_page_specific/_landing-page.sass */
+  .landing input {
+    margin-bottom: 13.5px; }
+  /* line 64, ../sass/6_page_specific/_landing-page.sass */
   .landing #footer {
     margin: 0 27px;
     border-top: 1px solid rgba(255, 255, 255, 0.1);
     padding-top: 13.5px;
     min-height: 60px; }
-    /* line 68, ../sass/6_page_specific/_landing-page.sass */
+    @media only screen and (max-width: 31.25em) {
+      /* line 64, ../sass/6_page_specific/_landing-page.sass */
+      .landing #footer {
+        border: 0;
+        padding: 0; } }
+    /* line 72, ../sass/6_page_specific/_landing-page.sass */
     .landing #footer .footer-container {
       display: inline-block; }
-      /* line 70, ../sass/6_page_specific/_landing-page.sass */
+      /* line 74, ../sass/6_page_specific/_landing-page.sass */
       .landing #footer .footer-container ul {
         width: 100%; }
-        /* line 72, ../sass/6_page_specific/_landing-page.sass */
+        /* line 76, ../sass/6_page_specific/_landing-page.sass */
         .landing #footer .footer-container ul li {
           float: left; }
-          /* line 75, ../sass/6_page_specific/_landing-page.sass */
+          /* line 78, ../sass/6_page_specific/_landing-page.sass */
           .landing #footer .footer-container ul li a {
             font-size: 14px;
             font-size: 0.875rem;
@@ -2642,61 +2662,38 @@ input[type=file] {
             text-transform: capitalize;
             color: white;
             display: inline-block; }
-          /* line 82, ../sass/6_page_specific/_landing-page.sass */
+          /* line 84, ../sass/6_page_specific/_landing-page.sass */
           .landing #footer .footer-container ul li a:hover {
             color: #27ae60; }
-        /* line 84, ../sass/6_page_specific/_landing-page.sass */
+        /* line 86, ../sass/6_page_specific/_landing-page.sass */
         .landing #footer .footer-container ul li + li {
           margin-left: 27px; }
-        /* line 86, ../sass/6_page_specific/_landing-page.sass */
+        /* line 89, ../sass/6_page_specific/_landing-page.sass */
         .landing #footer .footer-container ul .copyright {
           font-family: Helvetica, Arial, sans-serif;
           color: #999999; }
         @media only screen and (max-width: 40.625em) {
-          /* line 91, ../sass/6_page_specific/_landing-page.sass */
+          /* line 94, ../sass/6_page_specific/_landing-page.sass */
           .landing #footer .footer-container ul li {
             width: 100%;
             display: block; }
-            /* line 94, ../sass/6_page_specific/_landing-page.sass */
+            /* line 97, ../sass/6_page_specific/_landing-page.sass */
             .landing #footer .footer-container ul li a {
               width: 100%;
               border-radius: 2px;
               background-color: rgba(255, 255, 255, 0.1);
               display: block;
-              height: 40px;
-              line-height: 40px;
+              height: 50px;
+              line-height: 50px;
               color: white; }
-            /* line 102, ../sass/6_page_specific/_landing-page.sass */
+            /* line 105, ../sass/6_page_specific/_landing-page.sass */
             .landing #footer .footer-container ul li a:hover {
               background-color: rgba(255, 255, 255, 0.2);
               color: white; }
-          /* line 106, ../sass/6_page_specific/_landing-page.sass */
+          /* line 109, ../sass/6_page_specific/_landing-page.sass */
           .landing #footer .footer-container ul li + li {
             margin-left: 0;
             margin-top: 13.5px; } }
-  /* line 113, ../sass/6_page_specific/_landing-page.sass */
-  .landing h1 {
-    font-size: 50px;
-    font-size: 3.125rem; }
-  /* line 116, ../sass/6_page_specific/_landing-page.sass */
-  .landing .sub-title {
-    font-size: 70px;
-    font-size: 4.375rem;
-    font-weight: 300; }
-
-/* line 122, ../sass/6_page_specific/_landing-page.sass */
-.width100 {
-  width: 100%; }
-
-/* line 125, ../sass/6_page_specific/_landing-page.sass */
-.landing-page {
-  width: 100%;
-  max-width: 1000px;
-  padding: 0 54px; }
-  @media only screen and (max-width: 40.625em) {
-    /* line 125, ../sass/6_page_specific/_landing-page.sass */
-    .landing-page {
-      padding: 27px; } }
 
 /* line 1, ../sass/7_browser_specific/_firefox.sass */
 .fix-select {

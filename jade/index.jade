@@ -2,14 +2,14 @@ extends layout_landing
 
 block content
 
-  .container.global-width.padding-header
+  .container
     .grid.landing-page
 
       #container
-        .margin-bottom-double
-          .logo
+        .margin-bottom
+          .logo-landing
 
-        .margin-bottom-double
+        .margin-bottom
           .intro 
             span The Spark 
             |is the 
@@ -18,21 +18,21 @@ block content
             span.italic defy 
             |the public interest.
 
-        .margin-bottom-double
+        .margin-bottom
           #containingBlock
             .videoWrapper
               a(href="#0", class="sublime", data-autoresize="fit")
-                img(src="http://thespark.org/images/video.png", width="100%")
+                img(src="http://assets.thespark.org/static/images/video.jpg", width="100%")
               video(id="0", width="1000", height="563", title="The Spark", style="display:none", data-embed-type="auto", data-uid="0", data-autoresize="fit", preload="none")
                 source(src="http://player.vimeo.com/external/89787494.hd.mp4?s=261afc0b7a99ff0c5f61521e52b6131f", data-quality="hd")
                 source(src="http://player.vimeo.com/external/89787494.sd.mp4?s=b3c9eb3d455693225e4343bb2703ea11")
                 source(src="http://player.vimeo.com/external/89787494.mobile.mp4?s=127963e15e5175c838ce104dd1c80e40")
 
-        .margin-bottom
+        .margin
           form#mc-embedded-subscribe-form.validate(action='http://thespark.us6.list-manage.com/subscribe/post?u=2464cf7754052b9153148c53f&id=1a2854cfd8', method='post', name='mc-embedded-subscribe-form', novalidate='novalidate', target='_blank')
 
             .col50.padding-right
-              input#mce-EMAIL.email(name='EMAIL', placeholder='Enter your email address...', required='required', type='email', value='').margin-bottom
+              input#mce-EMAIL.email(name='EMAIL', placeholder='Enter your email address...', required='required', type='email', value='')
 
             .col50.padding-left
               button(name='subscribe', type='submit', value='Subscribe').button.green.signup.width100 Subscribe to the newsletter
