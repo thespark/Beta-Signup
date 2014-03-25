@@ -386,16 +386,6 @@
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 0
 		},
-	"\/jade\/stuff.jade": {
-		"compileDebug": 1,
-		"fileType": 512,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/jade\/stuff.jade",
-		"outputAbbreviatedPath": "\/stuff.html",
-		"outputPathIsSetByUser": 0,
-		"outputStyle": 0
-		},
 	"\/jobs.html": {
 		"fileType": 8192,
 		"ignore": 1,
